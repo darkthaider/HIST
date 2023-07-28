@@ -1,4 +1,4 @@
-import Header from "@/components/ui/header";
+import Header from "@/components/ui/header/header";
 import "../scss/global.scss";
 import type { Metadata } from "next";
 import { Anek_Devanagari } from "next/font/google";
