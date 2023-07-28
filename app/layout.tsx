@@ -2,7 +2,7 @@ import "../scss/global.scss";
 import type { Metadata } from "next";
 import { Anek_Devanagari } from "next/font/google";
 
-const anek_Devanagari = Anek_Devanagari({ subsets: ["latin"] });
+const anek_Devanagari = Anek_Devanagari({ subsets: ["devanagari"] });
 
 export const metadata: Metadata = {
   title: "HIST",

@@ -15,13 +15,13 @@ body {
   margin: 0 auto;
 }
 .subtitle-20-24 {
-  font-size: clamp(1.25rem, 1.1508rem + 0.4233vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.1807rem + 0.2956vw, 1.5rem);
   font-weight: 400;
   line-height: 110%;
   letter-spacing: -0.4px;
 }
 .title-32-76 {
-  font-size: clamp(2rem, 0.9087rem + 4.6561vw, 4.75rem);
+  font-size: clamp(2rem, 1.2378rem + 3.252vw, 4.75rem);
   line-height: 110%;
   font-weight: 500;
 }
@@ -30,6 +30,11 @@ body {
   line-height: 180%;
   font-weight: 400;
 }
+.testimonial-title-16-36 {
+  font-size: clamp(1rem, 0.6535rem + 1.4782vw, 2.25rem);
+  font-weight: 400;
+  line-height: 160%;
+}
 .subtitle-rectangle {
   width: 10px;
   height: 24px;
@@ -37,6 +42,6 @@ body {
   background-color: #fe490c;
 }
 .vertical-padding-32-82 {
-  padding-top: clamp(2rem, 0.7599rem + 5.291vw, 5.125rem);
-  padding-bottom: clamp(2rem, 0.7599rem + 5.291vw, 5.125rem);
+  padding-top: clamp(2rem, 1.1339rem + 3.6955vw, 5.125rem);
+  padding-bottom: clamp(2rem, 1.1339rem + 3.6955vw, 5.125rem);
 }
