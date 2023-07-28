@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className="hist-outer-container bg-hist_red">
-      <h1 className="hist-inner-container lg:text-hist_title_lg text-hist_white-900 bg-hist_white-800">
+    <main className="hist-outer-container">
+      <h1 className="hist-inner-container text-hist_title_lg text-hist_white-900">
         HIST
       </h1>
     </main>

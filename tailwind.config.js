@@ -6,6 +6,11 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      screens: {
+        container: { max: "1320px" },
+      },
+    },
     fontSize: {
       hist_title: "32px",
       hist_title_lg: "76px",
