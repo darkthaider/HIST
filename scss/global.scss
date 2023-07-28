@@ -7,8 +7,10 @@ body {
 }
 
 .hist-inner-container {
-  max-width: 1320px;
+  max-width: 1368px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .hist-outer-container {
   max-width: 1728px;
@@ -40,6 +42,7 @@ body {
   height: 24px;
   display: inline-block;
   background-color: #fe490c;
+  margin-right: 8px;
 }
 .vertical-padding-32-82 {
   padding-top: clamp(2rem, 1.1339rem + 3.6955vw, 5.125rem);
