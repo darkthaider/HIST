@@ -1,4 +1,4 @@
-import "../scss/global.scss";
+// import "../scss/global.scss";
 import type { Metadata } from "next";
 import { Anek_Devanagari } from "next/font/google";
 
