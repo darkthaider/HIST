@@ -9,20 +9,24 @@ module.exports = {
     extend: {
       screens: {
         container: { max: "1320px" },
+        minContainer: { min: "1321px" },
+      },
+      boxShadow: {
+        faqBtnShadow:
+          "box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.05) inset, 0px 0px 55px 0px rgba(42, 45, 61, 0.08)",
       },
     },
-    fontSize: {
-      hist_title: "32px",
-      hist_title_lg: "76px",
-      hist_description: "16px",
-      hist_description_lg: "20px",
+    backgroundImage: {
+      faqBtn:
+        "linear-gradient(221deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.00) 100%)",
     },
     colors: {
       hist_red: "#FE490C",
       hist_black: "#161616",
       hist_white: {
-        100: "#ffffff1a",
-        500: "#ffffff80",
+        100: "#ffffff1a" /* 0.10 */,
+        200: "#ffffff33" /* 0.20 */,
+        500: "#ffffff80" /* 0.5 */,
         800: "#ffffffcc",
         900: "#ffffff",
       },
