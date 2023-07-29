@@ -1,3 +1,5 @@
+import styles from "./experience.module.scss";
+
 const Experience = () => {
   return (
     <section className="hist-outer-container vertical-padding-32-82">
@@ -6,12 +8,14 @@ const Experience = () => {
           <span className="subtitle-rectangle"></span>
           services
         </div>
-        <h2 className="title-32-76 text-hist_white-900 sm:max-w-lg max-w-xs">
+        <h2
+          className={` ${styles.experienceTitle} title-32-76 text-hist_white-900 }`}
+        >
           With 30+ years of experience we position companies to become
           Monopolies.
         </h2>
-        <div className="flex justify-end" style={{ marginTop: "242px" }}>
-          <p className="text-hist_white-800 max-w-md desc-16-20">
+        <div className={`${styles.expDesc} flex justify-end`}>
+          <p className="text-hist_white-800 desc-16-20">
             Our services include market research, product positioning and
             branding, distribution network management, regulatory compliance,
             and much more. We understand that expanding to new markets can be

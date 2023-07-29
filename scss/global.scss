@@ -48,26 +48,3 @@ body {
   padding-top: clamp(2rem, 1.1339rem + 3.6955vw, 5.125rem);
   padding-bottom: clamp(2rem, 1.1339rem + 3.6955vw, 5.125rem);
 }
-
-.timeline_wrapper {
-  // display: flex;
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  margin-top: 240px;
-  // align-items: end;
-  // justify-content: space-between;
-  .card {
-    // height: 200px;
-    // border-left: 1px solid rgba(255, 255, 255, 0.5);
-    padding-left: 12px;
-    width: 300px;
-  }
-  // .card2 {
-  //   height: 140px;
-  // }
-  // .card3 {
-  //   height: 100px;
-  // }
-  // .card4 {
-  //   height: 80px;
-  // }
-}
