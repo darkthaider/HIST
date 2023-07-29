@@ -1,3 +1,6 @@
+"use-client";
+
+import TestimonaialSlider from "@/components/TestimonialSlider/TestimonialSlider";
 import Experience from "@/components/ui/experience/Experience";
 import Services from "@/components/ui/services/Services";
 
@@ -9,6 +12,7 @@ export default function Home() {
       </h1>
       <Experience />
       <Services />
+      <TestimonaialSlider />
     </main>
   );
 }

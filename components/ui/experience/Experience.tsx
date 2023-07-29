@@ -9,7 +9,7 @@ const Experience = () => {
           services
         </div>
         <h2
-          className={` ${styles.experienceTitle} title-32-76 text-hist_white-900 }`}
+          className={` ${styles.experienceTitle} title-32-76 text-hist_white-900 `}
         >
           With 30+ years of experience we position companies to become
           Monopolies.

@@ -41,7 +41,7 @@ const Services = () => {
           {services.map((data) => (
             <div key={data.number} className="mt-8">
               <span className="text-hist_white-500">{data.number}</span>
-              <p className={` ${styles.serviceTxt} text-hist_white-800 mt-3`}>
+              <p className={` ${styles.serviceTxt} text-hist_white-800 mt-1`}>
                 {data.text}
               </p>
               <span
