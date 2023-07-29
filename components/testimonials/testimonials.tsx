@@ -27,21 +27,9 @@ const Testimonials: FC<any> = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const swiperRef = useRef(null);
 
-  const goNext = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
-
-  const goPrev = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
-
   return (
     <section
-      className={`${styles.TestimonialSliderWrapper} hist-outer-container vertical-padding-32-82`}
+      className={`${styles.TestimonialSliderWrapper} hist-outer-container vertical-padding-48-82`}
     >
       <div className="hist-inner-container px-2">
         <div className="flex md:justify-center">

@@ -21,7 +21,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="hist-outer-container vertical-padding-32-82">
+    <section className="hist-outer-container vertical-padding-48-82">
       <div className="hist-inner-container px-2 sm:text-center text-left">
         <div className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center">
           <span className="subtitle-rectangle"></span>

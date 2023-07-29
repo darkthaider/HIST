@@ -11,6 +11,7 @@ module.exports = {
         mdMax: { max: "767px" },
         container: { max: "1320px" },
         minContainer: { min: "1321px" },
+        minOuterContainer: { min: "1728px" },
       },
       boxShadow: {
         faqBtnShadow:

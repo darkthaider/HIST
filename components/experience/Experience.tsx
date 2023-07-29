@@ -2,7 +2,7 @@ import styles from "./experience.module.scss";
 
 const Experience = () => {
   return (
-    <section className="hist-outer-container vertical-padding-32-82">
+    <section className="hist-outer-container vertical-padding-48-82">
       <div className="hist-inner-container px-2">
         <div className="desc-16-20 text-hist_white-500 flex capitalize">
           <span className="subtitle-rectangle"></span>
