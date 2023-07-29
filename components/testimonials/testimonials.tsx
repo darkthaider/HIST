@@ -21,9 +21,9 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import { FreeMode, Thumbs } from "swiper/modules";
+import { FreeMode, Thumbs, Navigation } from "swiper/modules";
 
-const TestimonialSlider: FC<any> = () => {
+const Testimonials: FC<any> = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const swiperRef = useRef(null);
 
@@ -48,16 +48,15 @@ const TestimonialSlider: FC<any> = () => {
           <Image src={comma} alt="comma" />
         </div>
         <Swiper
-          style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
-          }}
           loop={true}
           ref={swiperRef}
           spaceBetween={10}
           thumbs={{ swiper: thumbsSwiper }}
-          modules={[FreeMode, Thumbs]}
-          className="mySwiper2"
+          modules={[FreeMode, Thumbs, Navigation]}
+          navigation={{
+            nextEl: ".stories-button-next",
+            prevEl: ".stories-button-prev",
+          }}
         >
           <div className={styles.testimonialsThumb}>
             {testimonialSlides.map((data, index) => (
@@ -73,20 +72,23 @@ const TestimonialSlider: FC<any> = () => {
                     {data.designation}
                   </span>
                 </p>
+                <div className="flex justify-center">
+                  <p className="text-hist_white-900">logos</p>
+                </div>
               </SwiperSlide>
             ))}
           </div>
         </Swiper>
         <div className="flex justify-between items-center">
-          <div className="custom-arrow custom-arrow-next" onClick={goNext}>
+          <div className="custom-arrow custom-arrow-next stories-button-prev">
             <Image src={arrowLeft} alt="arrowLeft" />
           </div>
           <span className={`${styles.swiperLine} bg-hist_white-500`}></span>
-          <div className="custom-arrow custom-arrow-prev" onClick={goPrev}>
+          <div className="custom-arrow custom-arrow-prev stories-button-next">
             <Image src={arrowRight} alt="arrowRight" />
           </div>
         </div>
-        <Swiper
+        {/* <Swiper
           onSwiper={setThumbsSwiper}
           slidesPerView={1}
           modules={[FreeMode, Thumbs]}
@@ -102,10 +104,10 @@ const TestimonialSlider: FC<any> = () => {
               </SwiperSlide>
             ))}
           </div>
-        </Swiper>
+        </Swiper> */}
       </div>
     </section>
   );
 };
 
-export default TestimonialSlider;
+export default Testimonials;

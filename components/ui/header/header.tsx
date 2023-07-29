@@ -39,7 +39,7 @@ const Header: FC<headerProps> = ({}) => {
   };
   return (
     <header
-      className={`mdMax:fixed mdMax:z-10 mdMax:w-[100%] mdMax:overflow-hidden mdMax:bg-hist_black h-[88px] md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 md:mt-10 transition-all duration-500 ${
+      className={`mdMax:fixed mdMax:z-10 mdMax:top-0 mdMax:w-[100%] mdMax:overflow-hidden mdMax:bg-hist_black h-[88px] md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 md:mt-10 transition-all duration-500 ${
         isNavOpen ? "mdMax:h-screen" : ""
       } `}
     >
