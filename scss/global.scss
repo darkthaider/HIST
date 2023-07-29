@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+img,
+svg {
+  max-width: 100%;
+}
+
 body {
   font-size: 16px;
 }
@@ -29,7 +34,7 @@ body {
 }
 .desc-16-20 {
   font-size: clamp(1rem, 0.9008rem + 0.4233vw, 1.25rem);
-  line-height: 180%;
+  line-height: 150%;
   font-weight: 400;
 }
 .testimonial-title-16-36 {
@@ -47,4 +52,17 @@ body {
 .vertical-padding-32-82 {
   padding-top: clamp(2rem, 1.1339rem + 3.6955vw, 5.125rem);
   padding-bottom: clamp(2rem, 1.1339rem + 3.6955vw, 5.125rem);
+}
+.horizontal-padding-24-64 {
+  padding-left: clamp(1.5rem, 0.8071rem + 2.9564vw, 4rem);
+  padding-right: clamp(1.5rem, 0.8071rem + 2.9564vw, 4rem);
+}
+.faq-title-20-32 {
+  font-size: clamp(1.25rem, 1.0421rem + 0.8869vw, 2rem);
+  font-weight: 400;
+  line-height: 120%;
+}
+.mt-16-32 {
+  margin-top: clamp(1rem, 0.7228rem + 1.1826vw, 2rem);
+  margin-bottom: clamp(1rem, 0.7228rem + 1.1826vw, 2rem);
 }
