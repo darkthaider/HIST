@@ -1,13 +1,48 @@
+"use client";
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface headerProps {}
 
-const navLinks = ["Services", "Industries", "Process", "About us", "FAQ"];
+const navLinks = [
+  {
+    title: "Services",
+    link: "/services",
+  },
+  {
+    title: "Industries",
+    link: "/industries",
+  },
+  {
+    title: "Process",
+    link: "/process",
+  },
+  {
+    title: "About us",
+    link: "/about-us",
+  },
+  {
+    title: "FAQ",
+    link: "/faq",
+  },
+];
 
 const Header: FC<headerProps> = ({}) => {
+  const pathname = usePathname();
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleNavToggle = () => {
+    setIsNavOpen(!isNavOpen);
+    const bodyElem: any = document.querySelector("body");
+    bodyElem.style.overflow = isNavOpen ? "auto" : "hidden";
+  };
   return (
-    <header className="md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 md:mt-10">
+    <header
+      className={`mdMax:fixed mdMax:z-10 mdMax:w-[100%] mdMax:overflow-hidden mdMax:bg-hist_black h-[88px] md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 md:mt-10 transition-all duration-500 ${
+        isNavOpen ? "mdMax:h-screen" : ""
+      } `}
+    >
       <div className="md:bg-hist_white-100 pl-4 pr-4 lg:pl-6 lg:pr-6 xl:pl-8 xl:pr-8 pt-4 pb-4 flex justify-between items-center rounded-lg">
         <Link href="/" className="max-w-[100px] md:max-w-[120px] xl:max-w-none">
           <svg
@@ -56,25 +91,45 @@ const Header: FC<headerProps> = ({}) => {
           </svg>
         </Link>
 
-        <nav className="hidden md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center">
-          {navLinks.map((item: string) => (
+        <nav className="mdMax:absolute mdMax:h-screen mdMax:left-0 mdMax:pt-[100px] mdMax:top-0 mdMax:flex mdMax:flex-col mdMax:w-[100%] mdMax:gap-[48px] mdMax:z-[-1] md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center">
+          {navLinks.map((item) => (
             <Link
-              key={item}
-              href="/"
-              className="text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-hist_white-900 duration-300 pt-1"
+              key={item.link}
+              href={item.link}
+              className={`mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-hist_white-900 duration-300 md:pt-1 underline-offset-2 ${
+                pathname === item.link
+                  ? "underline decoration-1 text-hist_white-900"
+                  : ""
+              }`}
             >
-              {item}
+              {item.title}
             </Link>
           ))}
           <Link
             href="/"
-            className="inline-flex font-normal ml-4 xl:ml-8 bg-hist_white-900 text-lg xl:text-2xl pr-4 pl-4 lg:pl-6 lg:pr-6 pb-1 pt-2 xl:pt-3 rounded-full leading-[26px]"
+            className="mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 md:inline-flex font-normal md:ml-4 xl:ml-8 md:bg-hist_white-900 md:text-lg xl:text-2xl md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 md:pb-1 md:pt-2 xl:pt-3 md:rounded-full md:leading-[26px]"
           >
             Contact us
           </Link>
         </nav>
 
-        <button className="text-hist_red md:hidden">menu</button>
+        <button
+          onClick={handleNavToggle}
+          className={`text-hist_red md:hidden h-[16px] flex flex-col items-end ${
+            isNavOpen ? "h-[24px] justify-center" : "justify-between"
+          }`}
+        >
+          <span
+            className={`inline-block w-[30px] bg-hist_white-900 h-[1px] transition-all duration-200 ${
+              isNavOpen ? "rotate-45" : ""
+            }`}
+          ></span>
+          <span
+            className={`inline-block w-[15px] bg-hist_white-900 h-[1px] transition-transform duration-200 ${
+              isNavOpen ? "w-[30px] rotate-[-45deg]" : ""
+            }`}
+          ></span>
+        </button>
       </div>
     </header>
   );

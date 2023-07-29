@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        mdMax: { max: "767px" },
         container: { max: "1320px" },
         minContainer: { min: "1321px" },
       },

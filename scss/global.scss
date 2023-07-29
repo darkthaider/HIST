@@ -62,7 +62,7 @@ body {
   font-weight: 400;
   line-height: 120%;
 }
-.mt-16-32 {
-  margin-top: clamp(1rem, 0.7228rem + 1.1826vw, 2rem);
-  margin-bottom: clamp(1rem, 0.7228rem + 1.1826vw, 2rem);
+.pt-16-32 {
+  padding-top: clamp(1rem, 0.7228rem + 1.1826vw, 2rem);
+  padding-bottom: clamp(1rem, 0.7228rem + 1.1826vw, 2rem);
 }
