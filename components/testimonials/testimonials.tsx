@@ -17,7 +17,7 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 const Testimonials: FC<any> = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const swiperRef = useRef(null);
   return (
     <section className="vertical-padding-48-82">
