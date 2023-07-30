@@ -49,7 +49,10 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
     setFaqData(updatedFaqData);
   };
   return (
-    <section className="hist-outer-container vertical-padding-48-82">
+    <section
+      id="about-us"
+      className="hist-inner-container vertical-padding-48-82"
+    >
       <div className="hist-inner-container">
         <div className="desc-16-20 text-hist_white-500 capitalize flex">
           <span className="subtitle-rectangle"></span>About Us / Mission
@@ -112,7 +115,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
                         </svg>
                       </Link>
                     </div>
-                    <span className="text-hist_white-800 about-us-designation-14-24 mr-[24px] md:mr-[124px]">
+                    <span className="text-hist_white-800 about-us-designation-14-24 mr-[24px] xl:mr-[124px]">
                       {item.designation}
                     </span>
                   </div>

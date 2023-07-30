@@ -20,7 +20,7 @@ const Testimonials: FC<any> = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const swiperRef = useRef(null);
   return (
-    <section className="vertical-padding-48-82">
+    <section className="hist-inner-container vertical-padding-48-82">
       <div className="hist-inner-container px-2">
         <div className="flex md:justify-center">
           <svg
