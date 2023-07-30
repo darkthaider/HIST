@@ -1,6 +1,6 @@
 const Industries = () => {
   return (
-    <section className="vertical-padding-32-82">
+    <section className="vertical-padding-48-82">
       <div className="hist-inner-container px-2">
         <div className="desc-16-20 text-hist_white-500 flex capitalize">
           <span className="subtitle-rectangle"></span>

@@ -21,6 +21,7 @@ module.exports = {
     backgroundImage: {
       faqBtn:
         "linear-gradient(221deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.00) 100%)",
+      startBtn: "linear-gradient(to right, #FE490C 0%, #ffffff 70%)",
     },
     colors: {
       hist_red: "#FE490C",

@@ -13,8 +13,8 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 const Process = () => {
   return (
-    <section>
-      <div className="hist-inner-container vertical-padding-32-82">
+    <section className="vertical-padding-48-82">
+      <div className="hist-inner-container">
         <div className="desc-16-20 text-hist_white-500 capitalize ">
           <span className="subtitle-rectangle"></span>
           Locations
