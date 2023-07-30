@@ -49,7 +49,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
     setFaqData(updatedFaqData);
   };
   return (
-    <section className="vertical-padding-48-82">
+    <section className="hist-inner-container vertical-padding-48-82">
       <div className="hist-inner-container">
         <div className="desc-16-20 text-hist_white-500 capitalize flex">
           <span className="subtitle-rectangle"></span>About Us / Mission

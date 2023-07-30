@@ -12,7 +12,7 @@ import Footer from "@/components/ui/footer/footer";
 
 export default function Home() {
   return (
-    <main className="hist-outer-container">
+    <main>
       <Hero />
       <Experience />
       <Services />

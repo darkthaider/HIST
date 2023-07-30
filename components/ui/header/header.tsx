@@ -40,8 +40,8 @@ const Header: FC<headerProps> = ({}) => {
   };
 
   useEffect(() => {
-    // lastScrollTop.current = document.documentElement.scrollTop;
     document.addEventListener("scroll", handleHeader);
+    handleHeader();
     return () => {
       document.removeEventListener("scroll", handleHeader);
     };
@@ -49,17 +49,11 @@ const Header: FC<headerProps> = ({}) => {
 
   const handleHeader = () => {
     const st = document.documentElement.scrollTop;
-    // if (st > lastScrollTop.current) {
-    if (st > window.innerHeight / 3) {
+    if (st > window.innerHeight) {
       setIsStickyNav(true);
     } else {
       setIsStickyNav(false);
     }
-    // } else {
-    //   setIsHeader(true);
-    // }
-
-    // lastScrollTop.current = st;
   };
 
   return (
@@ -162,8 +156,8 @@ const Header: FC<headerProps> = ({}) => {
         </div>
       </header>
       <div
-        className={`mdMax:hidden fixed bottom-0 left-[50%] transition-all duration-300 translate-y-[100%] translate-x-[-50%] z-10 backdrop-blur-[25px] rounded-[8px] px-8 py-4 border-2 border-hist_black bg-hist_white-100 ${
-          isStickyNav ? "bottom-[40px] translate-y-0" : ""
+        className={`mdMax:hidden fixed bottom-0 left-[50%] transition-all duration-300 translate-y-[100%] translate-x-[-50%] z-10 backdrop-blur-[25px] rounded-[8px] px-8 py-4 border-2 border-hist_white-100 bg-hist_white-100 ${
+          isStickyNav ? "bottom-[40px] translate-y-[0px]" : ""
         }`}
       >
         <nav className="md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center">
