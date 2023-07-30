@@ -51,7 +51,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
   return (
     <section className="hist-outer-container vertical-padding-48-82">
       <div className="hist-inner-container">
-        <div className="desc-16-20 text-hist_white-500 capitalize">
+        <div className="desc-16-20 text-hist_white-500 capitalize flex">
           <span className="subtitle-rectangle"></span>About Us / Mission
         </div>
         <h2 className="about-us-title-mb title-32-76 text-hist_white-900 mt-6 max-w-[1190px]">
