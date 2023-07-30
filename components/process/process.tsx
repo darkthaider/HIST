@@ -13,18 +13,17 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 const Process = () => {
   return (
-    <section className="vertical-padding-48-82">
-      <div className="hist-inner-container">
-        <div className="desc-16-20 text-hist_white-500 capitalize ">
+    <section className="hist-outer-container vertical-padding-48-82">
+      <div className="hist-inner-container ">
+        <div className="desc-16-20 text-hist_white-500 capitalize flex ">
           <span className="subtitle-rectangle"></span>
-          Locations
+          Process
         </div>
-        <h2 className="title-32-76 text-hist_white-900 mt-[22px] mb-[120px] ">
+        <h2 className="title-32-76 text-hist_white-900 mt-[22px] mb-[90px] md:mb-[120px] ">
           How We Work with you
         </h2>
       </div>
       <Swiper
-        loop={true}
         spaceBetween={56}
         modules={[FreeMode, Thumbs, Navigation]}
         className="customSwiper"
@@ -32,6 +31,15 @@ const Process = () => {
         breakpoints={{
           0: {
             slidesPerView: 1,
+          },
+          568: {
+            slidesPerView: 1.5,
+          },
+          768: {
+            slidesPerView: 1.5,
+          },
+          992: {
+            slidesPerView: 1.5,
           },
           1200: {
             slidesPerView: 1.5,
@@ -43,15 +51,15 @@ const Process = () => {
             <SwiperSlide key={index}>
               <div
                 key={index}
-                className="cardWrap flex justify-between items-center process-card-vertical-padding-48-112 process-card-horizontal-padding-32-64"
+                className="cardWrap block justify-between items-center flex-wrap process-card-vertical-padding-48-112 process-card-horizontal-padding-32-64 xl:flex"
               >
                 <div>
                   <span>{data.icon}</span>
-                  <p className="text-hist_white-900 process-card-32-48 mt-[118px]">
+                  <p className="text-hist_white-900 process-card-32-48 xl:mt-[118px] mt-[48px] lgMax:mb-[48px]">
                     {data.title}
                   </p>
                 </div>
-                <p className="max-w-[382px] desc-16-20 text-hist_white-500">
+                <p className="xl:max-w-[382px] desc-16-20 text-hist_white-500">
                   {data.desc}
                 </p>
               </div>

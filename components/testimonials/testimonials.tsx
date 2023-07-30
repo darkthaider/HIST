@@ -2,7 +2,7 @@
 
 import styles from "./testimonial.module.scss";
 
-import { testimonialSlides } from "./testimonialSlides";
+import { testimonialSlides, slideDesc } from "./testimonialSlides";
 
 import { FC, useRef, useState } from "react";
 // Import Swiper React components
@@ -17,8 +17,8 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 const Testimonials: FC<any> = () => {
-  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  // const swiperRef = useRef(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const swiperRef = useRef(null);
   return (
     <section className="vertical-padding-48-82">
       <div className="hist-inner-container px-2">
@@ -53,9 +53,9 @@ const Testimonials: FC<any> = () => {
         </div>
         <Swiper
           loop={true}
-          // ref={swiperRef}
+          ref={swiperRef}
           spaceBetween={10}
-          // thumbs={{ swiper: thumbsSwiper }}
+          thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Thumbs, Navigation]}
           navigation={{
             nextEl: ".stories-button-next",
@@ -67,7 +67,7 @@ const Testimonials: FC<any> = () => {
               <SwiperSlide key={index}>
                 <p
                   className={
-                    "text-hist_white-900 testimonial-title-16-36 md:text-center mdMax:mt-[27px] mt-[92px] max-w-[1148px] mx-auto"
+                    "text-hist_white-900 testimonial-title-16-36 md:text-center mdMax:mt-[28px] mt-[92px] max-w-[1148px] mx-auto"
                   }
                 >
                   {data.detail}
@@ -122,7 +122,7 @@ const Testimonials: FC<any> = () => {
             </svg>
           </div>
         </div>
-        {/* <Swiper
+        <Swiper
           onSwiper={setThumbsSwiper}
           slidesPerView={1}
           modules={[FreeMode, Thumbs]}
@@ -138,7 +138,7 @@ const Testimonials: FC<any> = () => {
               </SwiperSlide>
             ))}
           </div>
-        </Swiper> */}
+        </Swiper>
       </div>
     </section>
   );
