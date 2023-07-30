@@ -86,3 +86,33 @@ body {
   font-weight: 400;
   line-height: 120%;
 }
+.process-card-32-48 {
+  font-size: clamp(2rem, 1.7228rem + 1.1826vw, 3rem);
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.cardWrap {
+  border-radius: 8px;
+  background: linear-gradient(
+    221deg,
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.05) inset,
+    0px 0px 55px 0px rgba(42, 45, 61, 0.08);
+  backdrop-filter: blur(229px);
+}
+
+.process-card-vertical-padding-48-112 {
+  padding-top: clamp(3rem, 1.8914rem + 4.7302vw, 7rem);
+  padding-bottom: clamp(3rem, 1.8914rem + 4.7302vw, 7rem);
+}
+.process-card-horizontal-padding-32-64 {
+  padding-left: clamp(2rem, 1.4457rem + 2.3651vw, 4rem);
+  padding-right: clamp(2rem, 1.4457rem + 2.3651vw, 4rem);
+}
+
+.customSwiper {
+  padding-left: clamp(1.5rem, -41.25rem + 50vw, 12.75rem) !important;
+}

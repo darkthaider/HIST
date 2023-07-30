@@ -25,7 +25,7 @@ export const testimonialSlides = [
   },
   {
     detail:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quod quisquam nam fugit adipisci, non aut, culpa nihil inventore illo deserunt alias necessitatibus. Corrupti harum vitae eveniet reiciendis suscipit, ea provident, natus consequuntur a esse quod impedit ducimus voluptatem quasi dicta pariatur reprehenderit odit labore omnis accusamus voluptas maiores explicabo fugiat? Consequatur fuga omnis explicabo. Vel assumenda iure voluptatem distinctio, dolor commodi sunt dignissimos ducimus placeat minima temporibus dolore iusto aliquid? Explicabo sit ab temporibus sint, maiores quibusdam exercitationem sunt!",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quod quisquam nam fugit adipisci, non aut, culpa nihil inventore illo deserunt alias necessitatibus. Corrupti harum vitae eveniet reiciendis suscipit, ea provident, natus consequuntur a esse quod impedit ducimus voluptatem quasi dicta pariatur reprehenderit odit labore omnis accusamus voluptas maiores explicabo.",
     name: "Henrique Dubugras ",
     designation: "— Co-Founder and Co-CEO, Brex",
   },

@@ -21,14 +21,14 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="hist-outer-container vertical-padding-48-82">
+    <section className="vertical-padding-32-82">
       <div className="hist-inner-container px-2 sm:text-center text-left">
         <div className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center">
           <span className="subtitle-rectangle"></span>
           services
         </div>
         <h2
-          className={`${styles.servicesTitle} title-32-76 text-hist_white-900 max-w-service m-auto}`}
+          className={`${styles.servicesTitle} title-32-76 text-hist_white-900 }`}
         >
           Claim Sovereignty Over New Territory and subtitle.
         </h2>
