@@ -54,7 +54,3 @@ const Hero: FC<heroProps> = ({}) => {
 };
 
 export default Hero;
-
-// sm:max-w-[400px] sm:mx-auto lg:max-w-[668px]
-
-// sm:max-w-[500px] sm:mx-auto lg:max-w-[886px]
