@@ -8,19 +8,19 @@ interface headerProps {}
 const navLinks = [
   {
     title: "Services",
-    link: "/services",
+    link: "/#services",
   },
   {
     title: "Industries",
-    link: "/industries",
+    link: "/#industries",
   },
   {
     title: "Process",
-    link: "/process",
+    link: "/#process",
   },
   {
     title: "About us",
-    link: "/about-us",
+    link: "/#about-us",
   },
   {
     title: "FAQ",
@@ -156,8 +156,10 @@ const Header: FC<headerProps> = ({}) => {
         </div>
       </header>
       <div
-        className={`mdMax:hidden fixed bottom-0 left-[50%] transition-all duration-300 translate-y-[100%] translate-x-[-50%] z-10 backdrop-blur-[25px] rounded-[8px] px-8 py-4 border-2 border-hist_white-100 bg-hist_white-100 ${
-          isStickyNav ? "bottom-[40px] translate-y-[0px]" : ""
+        className={`mdMax:hidden fixed left-[50%] transition-all duration-300 translate-x-[-50%] z-10 backdrop-blur-[25px] rounded-[8px] px-8 py-4 border-2 border-hist_white-100 bg-hist_white-100 ${
+          isStickyNav
+            ? "bottom-[40px] translate-y-[0px]"
+            : "translate-y-[100%] bottom-0"
         }`}
       >
         <nav className="md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center">
