@@ -51,7 +51,7 @@ const Process = () => {
       >
         <div>
           {processCard.map((data, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="processSlide">
               <div
                 key={index}
                 className="cardWrap block justify-between items-center flex-wrap process-card-vertical-padding-48-112 process-card-horizontal-padding-32-64 xl:flex"

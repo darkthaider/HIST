@@ -17,11 +17,11 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 const Testimonials: FC<any> = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const swiperRef = useRef(null);
   return (
-    <section className="hist-inner-container vertical-padding-48-82">
-      <div className="hist-inner-container px-2">
+    <section className="hist-outer-container vertical-padding-48-82">
+      <div className="hist-inner-container">
         <div className="flex md:justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,9 +78,9 @@ const Testimonials: FC<any> = () => {
                     {data.designation}
                   </span>
                 </p>
-                <div className="flex justify-center">
+                {/* <div className="flex justify-center">
                   <p className="text-hist_white-900">logos</p>
-                </div>
+                </div> */}
               </SwiperSlide>
             ))}
           </div>
@@ -126,14 +126,14 @@ const Testimonials: FC<any> = () => {
           onSwiper={setThumbsSwiper}
           slidesPerView={1}
           modules={[FreeMode, Thumbs]}
-          className="mySwiper"
+          className={styles.mySwiperr}
           allowTouchMove={false}
         >
           <div className={`${styles.descSlides} `}>
-            {slideDesc.map((desc, index) => (
+            {slideDesc.map((data, index) => (
               <SwiperSlide key={index} className={styles.customSlide}>
-                <div className="flex justify-center">
-                  <p className="text-hist_white-900">{desc.detail}</p>
+                <div className="flex justify-center mdMax:justify-start mdMax:ml-[70px]">
+                  <p className="text-hist_white-900 mt-[18px]">{data.logo}</p>
                 </div>
               </SwiperSlide>
             ))}
