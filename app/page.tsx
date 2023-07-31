@@ -9,10 +9,12 @@ import Industries from "@/components/industries/industries";
 import Locations from "@/components/locations/locations";
 import Process from "@/components/process/process";
 import Footer from "@/components/ui/footer/footer";
+import Particle from "@/components/particles/particles";
 
 export default function Home() {
   return (
     <main>
+      <Particle />
       <Hero />
       <Experience />
       <Services />

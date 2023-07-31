@@ -1,0 +1,13 @@
+.circleWraper {
+  position: absolute;
+  //   left: 35%;
+  top: -20%;
+}
+
+.circleParticleWrap {
+  position: relative;
+
+  width: clamp(15rem, 5.9771rem + 32.0814vw, 40.625rem);
+  height: 540px;
+  //  position: "relative", width: "450px", height: "450px"
+}

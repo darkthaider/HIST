@@ -124,3 +124,11 @@ html {
 .processSlide {
   cursor: url("../public/ahmed.png"), auto !important;
 }
+
+#tsparticles2 {
+  max-width: 200px !important;
+  canvas {
+    position: absolute !important;
+    border-radius: 50%;
+  }
+}

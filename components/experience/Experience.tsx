@@ -1,8 +1,9 @@
+import Circles from "../circles/circles";
 import styles from "./experience.module.scss";
 
 const Experience = () => {
   return (
-    <section className="hist-outer-container vertical-padding-48-82">
+    <section className="hist-outer-container vertical-padding-48-82 relative">
       <div className="hist-inner-container">
         <div className="desc-16-20 text-hist_white-500 flex capitalize">
           <span className="subtitle-rectangle"></span>
@@ -24,6 +25,7 @@ const Experience = () => {
           </p>
         </div>
       </div>
+      <Circles />
     </section>
   );
 };
