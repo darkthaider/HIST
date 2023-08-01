@@ -1,3 +1,5 @@
+import TextAnimation from "../ui/textAnimation/textAnimation";
+
 const Locations = () => {
   return (
     <section className="hist-outer-container vertical-padding-48-82">
@@ -6,10 +8,12 @@ const Locations = () => {
           <span className="subtitle-rectangle"></span>
           Locations
         </div>
-        <h2 className="title-32-76 text-hist_white-900 max-w-[1190px] m-auto mt-[22px] ">
-          We are worldwide. <br /> Operating across emerging markets that are
-          ripe for the taking...
-        </h2>
+        <TextAnimation>
+          <h2 className="title-32-76 text-hist_white-900 max-w-[1190px] m-auto mt-[22px] ">
+            We are worldwide. <br /> Operating across emerging markets that are
+            ripe for the taking...
+          </h2>
+        </TextAnimation>
       </div>
     </section>
   );

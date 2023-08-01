@@ -1,3 +1,4 @@
+import TextAnimation from "../ui/textAnimation/textAnimation";
 import styles from "./service.module.scss";
 
 const services = [
@@ -30,16 +31,18 @@ const Services = () => {
           <span className="subtitle-rectangle"></span>
           services
         </div>
-        <h2
-          className={`${styles.serviceTitle} title-32-76 text-hist_white-900 lgMax:max-w-[600px] max-w-[880px] mb-[16px] mt-[28px] mx-auto }`}
-        >
-          Claim Sovereignty Over New Territory and subtitle.
-        </h2>
+        <TextAnimation>
+          <h2
+            className={`${styles.serviceTitle} title-32-76 text-hist_white-900 lgMax:max-w-[600px] max-w-[880px] mb-[16px] mt-[28px] mx-auto }`}
+          >
+            Claim Sovereignty Over New Territory and subtitle.
+          </h2>
 
-        <p className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]">
-          We provide high quality end to end services & tools to help grow with
-          you and plant your companies flag in new markets!
-        </p>
+          <p className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]">
+            We provide high quality end to end services & tools to help grow
+            with you and plant your companies flag in new markets!
+          </p>
+        </TextAnimation>
         <div className={`${styles.allServices} md:hidden mt-[56px]`}>
           {services.map((data) => (
             <div key={data.number} className="mt-[28px]">
