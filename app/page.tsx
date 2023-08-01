@@ -1,5 +1,3 @@
-"use-client";
-
 import Experience from "@/components/experience/Experience";
 import Services from "@/components/services/Services";
 import Hero from "@/components/hero/hero";
