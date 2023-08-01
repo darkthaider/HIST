@@ -2,6 +2,8 @@
 import Link from "next/link";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import ContactUsForm from "../contactUsForm/contactUsForm";
+import { AnimatePresence } from "framer-motion";
 
 interface headerProps {}
 
@@ -32,6 +34,7 @@ const Header: FC<headerProps> = ({}) => {
   const pathname = usePathname();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isStickyNav, setIsStickyNav] = useState(false);
+  const [isContactForm, setIsContactForm] = useState(false);
 
   const handleNavToggle = () => {
     setIsNavOpen(!isNavOpen);
@@ -54,6 +57,12 @@ const Header: FC<headerProps> = ({}) => {
     } else {
       setIsStickyNav(false);
     }
+  };
+
+  const handleFormToggle = () => {
+    setIsContactForm(!isContactForm);
+    const bodyElem: any = document.querySelector("body");
+    bodyElem.style.overflow = isContactForm ? "auto" : "hidden";
   };
 
   return (
@@ -128,12 +137,12 @@ const Header: FC<headerProps> = ({}) => {
                 {item.title}
               </Link>
             ))}
-            <Link
-              href="/"
-              className="mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 md:inline-flex font-normal md:ml-4 xl:ml-8 md:bg-hist_white-900 md:text-lg xl:text-2xl md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 md:pb-1 md:pt-2 xl:pt-3 md:rounded-full md:leading-[26px]"
+            <button
+              onClick={handleFormToggle}
+              className="mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 md:inline-flex font-normal md:ml-4 xl:ml-8 md:bg-hist_white-900 md:text-lg xl:text-2xl md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 md:pb-1 md:pt-2 xl:pt-3 md:rounded-full md:leading-[26px] text-hist_black"
             >
               Contact us
-            </Link>
+            </button>
           </nav>
 
           <button
@@ -176,14 +185,17 @@ const Header: FC<headerProps> = ({}) => {
               {item.title}
             </Link>
           ))}
-          <Link
-            href="/"
-            className="font-normal md:ml-4 xl:ml-8 md:bg-hist_white-900 md:text-lg xl:text-2xl md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 md:pb-1 md:pt-2 xl:pt-3 md:rounded-full md:leading-[26px] whitespace-nowrap"
+          <button
+            onClick={handleFormToggle}
+            className="font-normal md:ml-4 xl:ml-8 md:bg-hist_white-900 md:text-lg xl:text-2xl md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 md:pb-1 md:pt-2 xl:pt-3 md:rounded-full md:leading-[26px] whitespace-nowrap text-hist_black"
           >
             Contact us
-          </Link>
+          </button>
         </nav>
       </div>
+      <AnimatePresence>
+        {isContactForm && <ContactUsForm handleFormToggle={handleFormToggle} />}
+      </AnimatePresence>
     </>
   );
 };
