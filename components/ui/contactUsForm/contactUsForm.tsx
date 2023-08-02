@@ -1,4 +1,6 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useState } from "react";
 import { motion } from "framer-motion";
 
 interface contactUsFormProps {
@@ -6,6 +8,49 @@ interface contactUsFormProps {
 }
 
 const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [emailError, setEmailError] = useState(false);
+  const [requestStatus, setRequestStatus] = useState("");
+
+  const handleSubmitForm = (e: any) => {
+    e.preventDefault();
+
+    if (
+      email.trim() === "" ||
+      email.length === 0 ||
+      new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(email) ===
+        false
+    ) {
+      setEmailError(true);
+    }
+
+    if (!emailError) {
+      const data = new FormData();
+      data.append("Email", email);
+      data.append("Number", number);
+
+      setRequestStatus("loading");
+
+      fetch(
+        "https://script.google.com/macros/s/AKfycbxa6yvon3V54mQscCYGfAerXyUV-xoe2XOTLmAp1L2z2-Znv0ZsyBCBsb6UfHyn5ug_/exec",
+        {
+          method: "POST",
+          body: data,
+        }
+      )
+        .then((res) => {
+          if (res.status === 200) {
+            console.log(res);
+            setRequestStatus("sent");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          setRequestStatus("error");
+        });
+    }
+  };
   return (
     <motion.div
       initial={{ scale: 0.5, skew: 20 }}
@@ -38,7 +83,7 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
           </p>
         </div>
 
-        <form action="#" onSubmit={(e) => e.preventDefault()}>
+        <form action="#" onSubmit={handleSubmitForm}>
           <div>
             <label
               htmlFor="email"
@@ -48,13 +93,32 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
             </label>
             <div className="mt-0">
               <input
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (email.trim() !== "") {
+                    setEmailError(false);
+                  }
+                  if (e.target.value === "") {
+                    setEmailError(true);
+                  }
+                }}
                 id="email"
                 name="email"
                 type="email"
                 autoComplete="email"
                 required
-                className="w-full rounded-[8px] border border-[#343434] bg-hist_black px-2 py-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px]"
+                className={`w-full rounded-[8px] border border-[#343434] bg-hist_black px-[20px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px] ${
+                  emailError
+                    ? "focus:border-hist_red border-hist_red"
+                    : "border-[#343434]"
+                }`}
               />
+              {emailError && (
+                <small className="text-[#FE490C] text-xs">
+                  Please enter valid Email
+                </small>
+              )}
             </div>
           </div>
           <div className="mt-8">
@@ -64,14 +128,20 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
             >
               Phone number
             </label>
-            <div className="mt-0">
+            <div className="mt-0 relative">
+              <span className="text-hist_white-600 pt-[5px] absolute top-[50%] translate-y-[-50%] left-[20px]">
+                +1{" "}
+                <span className="h-[24px] pt-[1px] w-[1px] bg-[#343434] inline-block absolute top-[50%] translate-y-[-50%] left-[30px]"></span>
+              </span>
               <input
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
                 id="number"
                 name="number"
                 type="tel"
                 autoComplete="number"
                 required
-                className="w-full rounded-[8px] border border-[#343434] bg-hist_black px-2 py-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px]"
+                className="w-full rounded-[8px] border border-[#343434] bg-hist_black pl-[74px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px]"
               />
             </div>
           </div>
@@ -79,9 +149,15 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
           <div className="mt-12">
             <button
               type="submit"
-              className="flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border duration-300 bg-hist_black pt-4 pb-2 hover:bg-hist_white-900 hover:text-hist_black"
+              className={`flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border duration-300 bg-hist_black pt-4 pb-2 ${
+                requestStatus === "sent"
+                  ? "border-[#199255] bg-[#199255] text-[#ffffff]"
+                  : ""
+              }`}
             >
-              Submit
+              {requestStatus === "" && "Submit"}
+              {requestStatus === "loading" && "..."}
+              {requestStatus === "sent" && "Sent"}
             </button>
           </div>
         </form>
