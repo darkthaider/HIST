@@ -45,7 +45,7 @@ const Footer: FC<footerProps> = ({}) => {
             Build your next <br /> medical monopoly...
           </h2>
           <a className="bg-startBtn p-[2px] inline-block rounded-full" href="/">
-            <span className="text-[20px] inline-block md:inline-flex font-normal bg-hist_white-900 md:text-[32px] px-[48px] md:pb-1 pt-2 md:pt-3 rounded-full">
+            <span className="text-[20px] text-hist_black inline-block md:inline-flex font-normal bg-hist_white-900 md:text-[32px] px-[48px] md:pb-1 pt-2 md:pt-3 rounded-full">
               START
             </span>
           </a>
