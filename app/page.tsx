@@ -8,6 +8,7 @@ import Locations from "@/components/locations/locations";
 import Process from "@/components/process/process";
 import Footer from "@/components/ui/footer/footer";
 import Particle from "@/components/particles/particles";
+import GlobeComponent from "@/components/ui/globe/GlobeComponent";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Testimonials />
       <Industries />
       <Locations />
+      <GlobeComponent />
       <Process />
       <AboutUs />
       <Footer />
