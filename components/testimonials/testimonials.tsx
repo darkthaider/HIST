@@ -52,7 +52,7 @@ const Testimonials: FC<any> = () => {
           </svg>
         </div>
         <Swiper
-          loop={true}
+          loop={false}
           ref={swiperRef}
           spaceBetween={10}
           thumbs={{ swiper: thumbsSwiper }}
@@ -86,7 +86,7 @@ const Testimonials: FC<any> = () => {
           </div>
         </Swiper>
         <div className="flex justify-between items-center">
-          <div className="custom-arrow custom-arrow-next stories-button-prev">
+          <div className="cursor-pointer custom-arrow custom-arrow-next stories-button-next">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -105,7 +105,7 @@ const Testimonials: FC<any> = () => {
           <span
             className={`${styles.swiperLine} bg-hist_white-500 w-full`}
           ></span>
-          <div className="custom-arrow custom-arrow-prev stories-button-next">
+          <div className="cursor-pointer custom-arrow custom-arrow-prev stories-button-prev">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

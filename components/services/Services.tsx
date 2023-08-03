@@ -1,4 +1,6 @@
+import Image from "next/image";
 import styles from "./service.module.scss";
+import servicesImg from "@/public/services.png";
 
 const services = [
   {
@@ -40,6 +42,17 @@ const Services = () => {
           We provide high quality end to end services & tools to help grow with
           you and plant your companies flag in new markets!
         </p>
+        <div className="relative min-h-[200px] mt-[240px] mdMax:hidden">
+          <Image
+            loading="lazy"
+            src={servicesImg.src}
+            alt=""
+            objectFit="contain"
+            // width={100}
+            // height={100}
+            fill={true}
+          />
+        </div>
         <div className={`${styles.allServices} md:hidden mt-[56px]`}>
           {services.map((data) => (
             <div key={data.number} className="mt-[28px]">

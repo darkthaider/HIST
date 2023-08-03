@@ -1,3 +1,5 @@
+import globe from "@/public/globe.png";
+
 const Locations = () => {
   return (
     <section className="hist-outer-container vertical-padding-48-82">
@@ -11,6 +13,7 @@ const Locations = () => {
           ripe for the taking...
         </h2>
       </div>
+      <img src={globe.src} alt="" />
     </section>
   );
 };

@@ -2,7 +2,7 @@ const Industries = () => {
   return (
     <section
       id="industries"
-      className="hist-outer-container vertical-padding-48-82"
+      className="h-screen hist-outer-container vertical-padding-48-82"
     >
       <div className="hist-inner-container">
         <div className="desc-16-20 text-hist_white-500 flex capitalize">
