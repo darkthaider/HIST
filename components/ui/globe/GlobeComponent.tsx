@@ -20,8 +20,8 @@ function GlobeComponent() {
         globeRef.current.controls().enableZoom = false;
         globeRef.current.controls().autoRotate = true;
         globeRef.current.controls().autoRotateSpeed = 1;
-        globeRef.current.cameraDistanceRadiusScale = 2;
-        console.log(globeRef.current, "reef globe");
+        globeRef.current.cameraDistanceRadiusScale = 0.5;
+        console.log(globeRef.current.getGlobeRadius(), "reef globe");
       }
     }, 100);
     return () => clearTimeout(timer);
@@ -29,39 +29,41 @@ function GlobeComponent() {
 
   return (
     <section
-      className="hist-outer-container  overflow-hidden customGlobeContainer"
+      className="hist-outer-container  overflow-hidden customGlobeContainer relative h-screen"
       //   style={{ position: "relative" }}
     >
-      {/* <SizeMe>
-          {({ size: { width, height } }) => ( */}
-      <Globe
-        ref={globeRef}
-        // width={500}
-        // height={500}
-        backgroundColor="#161616"
-        pointsData={sampleCityData}
-        pointColor={() => (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <circle cx="12" cy="12" r="8" fill="red" />
-          </svg>
-        )}
-        pointAltitude={0.001}
-        pointLabel={"city"}
-        pointRadius="size"
-        hexPolygonsData={countries.features}
-        hexPolygonResolution={3}
-        hexPolygonMargin={0.5}
-        hexPolygonColor={() => "#FE490C"}
-        showAtmosphere={false}
-        showGlobe={false}
-      />
-      {/* )}
-        </SizeMe> */}
+      <div className="" style={{ width: "100%", paddingBottom: "75%" }}>
+        <SizeMe>
+          {({ size: { width, height } }) => (
+            <Globe
+              ref={globeRef}
+              width={width}
+              height={(width / 4) * 9}
+              backgroundColor="#161616"
+              pointsData={sampleCityData}
+              pointColor={() => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="8" fill="red" />
+                </svg>
+              )}
+              pointAltitude={0.001}
+              pointLabel={"city"}
+              pointRadius="size"
+              hexPolygonsData={countries.features}
+              hexPolygonResolution={3}
+              hexPolygonMargin={0.5}
+              hexPolygonColor={() => "#FE490C"}
+              showAtmosphere={false}
+              showGlobe={false}
+            />
+          )}
+        </SizeMe>
+      </div>
     </section>
   );
 }
