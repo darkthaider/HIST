@@ -44,7 +44,7 @@ const Header: FC<headerProps> = ({}) => {
 
   useEffect(() => {
     document.addEventListener("scroll", handleHeader);
-    handleHeader();
+    // handleHeader();
     return () => {
       document.removeEventListener("scroll", handleHeader);
     };
