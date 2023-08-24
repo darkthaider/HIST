@@ -1,3 +1,4 @@
+import GlobeComponent from "../ui/globe/GlobeComponent";
 import TextAnimation from "../ui/textAnimation/textAnimation";
 
 const Locations = () => {

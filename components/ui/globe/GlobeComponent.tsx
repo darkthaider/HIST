@@ -38,8 +38,8 @@ function GlobeComponent() {
     const timer = setTimeout(() => {
       if (globeRef.current) {
         globeRef.current.controls().enableZoom = false;
-        globeRef.current.controls().autoRotate = false;
-        globeRef.current.cameraDistanceRadiusScale = 1;
+        globeRef.current.controls().autoRotate = true;
+        globeRef.current.controls().autoRotateSpeed = 0.3;
         console.log(globeRef.current.getGlobeRadius(), "reef globe");
       }
     }, 100);
@@ -50,7 +50,7 @@ function GlobeComponent() {
   return (
     <section
       className="hist-outer-container  overflow-hidden customGlobeContainer relative h-screen"
-      //   style={{ position: "relative" }}
+      style={{ position: "relative" }}
     >
       <div className="" style={{ width: "100%", paddingBottom: "75%" }}>
         <SizeMe>
@@ -61,13 +61,13 @@ function GlobeComponent() {
               height={(width / 4) * 9}
               backgroundColor="#161616"
               pointsData={sampleCityData}
-              pointColor={() => customPointColor}
+              pointColor={() => "#ffffff"}
               pointAltitude={0.001}
               pointLabel={"city"}
               pointRadius="size"
               hexPolygonsData={countries.features}
-              hexPolygonResolution={3}
-              hexPolygonMargin={0.7}
+              hexPolygonResolution={4}
+              hexPolygonMargin={0.6}
               hexPolygonColor={() => "#FE490C"}
               showAtmosphere={false}
               showGlobe={false}
