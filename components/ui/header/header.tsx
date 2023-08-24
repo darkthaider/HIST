@@ -44,7 +44,7 @@ const Header: FC<headerProps> = ({}) => {
 
   useEffect(() => {
     document.addEventListener("scroll", handleHeader);
-    // handleHeader();
+    handleHeader();
     return () => {
       document.removeEventListener("scroll", handleHeader);
     };
@@ -52,6 +52,11 @@ const Header: FC<headerProps> = ({}) => {
 
   const handleHeader = () => {
     const st = document.documentElement.scrollTop;
+    if (st > window.innerHeight) {
+      setIsStickyNav(true);
+    } else {
+      setIsStickyNav(false);
+    }
   };
 
   const handleFormToggle = () => {
