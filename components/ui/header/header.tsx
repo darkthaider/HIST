@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import ContactUsForm from "../contactUsForm/contactUsForm";
 import { AnimatePresence } from "framer-motion";
