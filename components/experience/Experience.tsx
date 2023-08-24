@@ -9,8 +9,7 @@ const Experience = () => {
           experience
         </div>
         <h2 className="title-32-76 text-hist_white-900 lgMax:max-w-[716px] max-w-[1013px] mt-[28px] ">
-          With 30+ years of experience we position companies to become
-          Monopolies.
+          With 30+ years of experience we help grow companies fast!
         </h2>
         <div className={`justify-end lg:flex block mt-[242px]`}>
           <p className="text-hist_white-800 desc-16-20 max-w-[648px]">
@@ -20,7 +19,7 @@ const Experience = () => {
             challenging, which is why we work closely with our clients to ensure
             that their products are well received and reach their target
             audience. With our expertise, we help our clients overcome any
-            obstacles and achieve success in the Middle East.
+            obstacles and achieve success!
           </p>
         </div>
       </div>

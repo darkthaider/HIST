@@ -77,9 +77,8 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
             />
           </svg>
           <h4 className="contact-us-form-title mt-8 mb-3">Contact Us</h4>
-          <p className="mb-8 contact-us-form-desc text-hist_white-500">
-            Join our growing waitlist of 5,680 people and our <br /> team will
-            reach out to you as soon as possible.
+          <p className="mb-8 contact-us-form-desc text-hist_white-500 max-w-[328px]">
+            Let{"'"}s partner and see how we can help you grow your company.
           </p>
         </div>
 
@@ -129,10 +128,10 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
               Phone number
             </label>
             <div className="mt-0 relative">
-              <span className="text-hist_white-600 pt-[5px] absolute top-[50%] translate-y-[-50%] left-[20px]">
+              {/* <span className="text-hist_white-600 pt-[5px] absolute top-[50%] translate-y-[-50%] left-[20px]">
                 +1{" "}
                 <span className="h-[24px] pt-[1px] w-[1px] bg-[#343434] inline-block absolute top-[50%] translate-y-[-50%] left-[30px]"></span>
-              </span>
+              </span> */}
               <input
                 value={number}
                 onChange={(e) => setNumber(e.target.value)}
@@ -141,7 +140,7 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
                 type="tel"
                 autoComplete="number"
                 required
-                className="w-full rounded-[8px] border border-[#343434] bg-hist_black pl-[74px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px]"
+                className="w-full rounded-[8px] border border-[#343434] bg-hist_black px-[20px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px]"
               />
             </div>
           </div>
@@ -149,7 +148,7 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
           <div className="mt-12">
             <button
               type="submit"
-              className={`flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border duration-300 bg-hist_black pt-4 pb-2 ${
+              className={`flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border duration-300 bg-hist_black pt-4 pb-2 hover:bg-hist_red hover:border-hist_red ${
                 requestStatus === "sent"
                   ? "border-[#199255] bg-[#199255] text-[#ffffff]"
                   : ""
