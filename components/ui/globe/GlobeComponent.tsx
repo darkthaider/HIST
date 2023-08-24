@@ -44,7 +44,7 @@ function GlobeComponent() {
       }
     }, 100);
     return () => clearTimeout(timer);
-  }, []);
+  }, [globeRef.current]);
 
   const customPointColor = (city) => city.svg;
   return (
