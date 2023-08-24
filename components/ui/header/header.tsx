@@ -52,11 +52,6 @@ const Header: FC<headerProps> = ({}) => {
 
   const handleHeader = () => {
     const st = document.documentElement.scrollTop;
-    // if (window && st > window.innerHeight) {
-    //   setIsStickyNav(true);
-    // } else {
-    //   setIsStickyNav(false);
-    // }
   };
 
   const handleFormToggle = () => {
