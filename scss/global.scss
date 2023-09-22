@@ -150,6 +150,15 @@ html {
   // background-color: red;
   color: aqua !important;
   padding: 12px;
+  position: relative;
+  &:after {
+    content: "";
+    background-color: red;
+    height: 50px;
+    width: 2px;
+    top: 0;
+    position: absolute;
+  }
 }
 
 .customGlobeContainer {
