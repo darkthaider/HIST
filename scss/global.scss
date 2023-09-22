@@ -151,14 +151,14 @@ html {
   color: aqua !important;
   padding: 12px;
   position: relative;
-  &:after {
-    content: "";
-    background-color: red;
-    height: 50px;
-    width: 2px;
-    top: 0;
-    position: absolute;
-  }
+  // &:after {
+  //   content: "";
+  //   background-color: red;
+  //   height: 50px;
+  //   width: 2px;
+  //   top: 0;
+  //   position: absolute;
+  // }
 }
 
 .customGlobeContainer {
@@ -175,5 +175,67 @@ html {
     // height: 100% !important;
     // // bottom: -668px;
     // top: -17%;
+  }
+}
+
+.custom-markerss {
+  background-color: #fe490c;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.tooltipss {
+  background-color: red;
+  padding: 12px;
+  width: 100px;
+  white-space: nowrap;
+  position: relative;
+  // &:after {
+  //   content: "";
+  //   background-color: green;
+  //   height: 50px;
+  //   width: 9px;
+  //   top: 0;
+  //   position: absolute;
+  // }
+  // &:before {
+  //   content: "";
+  //   background-color: blue;
+  //   height: 50px;
+  //   width: 9px;
+  //   top: 10px;
+  //   position: absolute;
+  // }
+}
+
+.cutomTool,
+.tooltipss {
+  color: white;
+  text-align: center;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 121px;
+    width: 1px;
+    rotate: 30deg;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 41px;
+    width: 1px;
+    rotate: 80deg;
+    top: -16px;
+    left: 1366px;
   }
 }

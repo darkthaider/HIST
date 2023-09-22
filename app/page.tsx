@@ -10,6 +10,7 @@ import Footer from "@/components/ui/footer/footer";
 import Particle from "@/components/particles/particles";
 import GlobeComponent from "@/components/ui/globe/GlobeComponent";
 import NoSSRWrapper from "@/components/NoSSRWrapper";
+import TooltipEl from "@/components/ui/globe/tooltip";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <NoSSRWrapper>
         <GlobeComponent />
       </NoSSRWrapper>
+      <TooltipEl />
       <Process />
       <AboutUs />
       <Footer />
