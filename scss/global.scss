@@ -11,7 +11,7 @@ body,
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  color: white;
+  // color: white;
 }
 
 .hist-inner-container {
@@ -125,6 +125,14 @@ html {
 .processSlide {
   cursor: url("../public/ahmed.png"), auto !important;
 }
+
+#tsparticles2 {
+  max-width: 200px !important;
+  canvas {
+    position: absolute !important;
+    border-radius: 50%;
+  }
+}
 .contact-us-form-title {
   font-size: clamp(1.5rem, 1.3614rem + 0.5913vw, 2rem);
   font-style: normal;
@@ -136,4 +144,27 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+
+.scene-tooltip {
+  // background-color: red;
+  color: aqua !important;
+  padding: 12px;
+}
+
+.customGlobeContainer {
+  // div {
+  //   width: clamp(64.8125rem, 36.2302rem + 121.9512vw, 167.9375rem) !important;
+  //   height: clamp(40.375rem, 25.5815rem + 63.119vw, 93.75rem) !important;
+  //   // width: 5476px !important;
+  //   height: 700px !important;
+  // }
+  canvas {
+    // position: absolute;
+    // left: clamp(-28.5rem, -22.1142rem + -5.9128vw, -28.5rem) !important;
+    // width: 100% !important;
+    // height: 100% !important;
+    // // bottom: -668px;
+    // top: -17%;
+  }
 }

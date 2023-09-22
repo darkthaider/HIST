@@ -1,4 +1,7 @@
+"use client";
+
 import React, { FC } from "react";
+import TextAnimation from "../ui/textAnimation/textAnimation";
 
 interface heroProps {}
 
@@ -39,13 +42,15 @@ const Hero: FC<heroProps> = ({}) => {
         </div>
         <div className="hist-inner-container">
           <div className="mdMax:text-center">
-            <h1 className="text-hist_white-900 hero-title-56-128 mdMax:mt-[48px] mb-4 xl:mt-[70px]">
-              Modern <br /> Strategists of <br /> Distribution
-            </h1>
-            <p className="hero-desc-18-32 text-hist_white-800 ">
-              Hist® partnering with medical companies to <br /> expand &
-              dominate new markets.
-            </p>
+            <TextAnimation>
+              <h1 className="text-hist_white-900 hero-title-56-128 mdMax:mt-[48px] mb-4 xl:mt-[70px]">
+                Modern <br /> Strategists of <br /> Distribution
+              </h1>
+              <p className="hero-desc-18-32 text-hist_white-800 ">
+                Hist® partnering with medical companies to <br /> expand &
+                dominate new markets.
+              </p>
+            </TextAnimation>
           </div>
         </div>
       </section>
