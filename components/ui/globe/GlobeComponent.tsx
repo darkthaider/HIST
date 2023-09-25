@@ -8,6 +8,7 @@ import { SizeMe } from "react-sizeme";
 import CustomPointer from "./customPointer";
 import globeImg from "../../../public/globe.png";
 import TooltipEl from "./tooltip";
+import marker from "../../../public/dragCursor.svg";
 
 function GlobeComponent() {
   const globeRef = useRef();
@@ -21,20 +22,6 @@ function GlobeComponent() {
       lat: 47.7511,
       lng: -120.7401,
       size: "1.25",
-      svg: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="19"
-          height="23"
-          viewBox="0 0 19 23"
-          fill="none"
-        >
-          <path
-            d="M11.5857 2.0018C10.3234 1.48128 8.98425 1.94446 7.42089 2.32872C5.92445 2.69659 4.19092 3.04808 2.03233 2.71406L2.02949 2.33167C2.21551 2.22134 2.36982 2.05937 2.45946 1.84199C2.67528 1.3186 2.43638 0.723749 1.92594 0.513268C1.41549 0.302787 0.826676 0.556522 0.610925 1.07975C0.411752 1.56276 0.603479 2.09961 1.03507 2.34619L1.00559 22.5177L2.0072 22.5063L2.01814 13.4238C3.84907 13.5864 5.35437 13.2816 6.62462 13.0711C7.98663 12.8453 9.03618 12.7387 10.1179 13.3074C10.316 13.4114 10.3465 13.4895 10.3637 13.6947C10.3521 14.3204 10.0801 14.8646 9.90268 15.4276C9.74481 15.9614 9.88097 16.3787 10.4698 16.4497C13.1889 16.2247 15.6003 16.6855 18.0861 17.7105C18.2607 17.7852 18.4784 17.7463 18.6208 17.6149C18.7633 17.4836 18.8231 17.2666 18.7676 17.082C17.8885 14.0329 16.4674 9.67199 18.7694 7.40676C18.9744 7.20976 18.9701 6.83412 18.7606 6.64956C17.4825 5.52769 15.6809 5.32374 13.8423 5.34051C13.3467 3.99311 12.7583 2.51026 11.586 2.00199L11.5857 2.0018ZM2.0302 4.87011C2.74537 6.68462 2.64739 8.40201 2.02426 10.0477L2.0302 4.87011Z"
-            fill="#FE490C"
-          />
-        </svg>
-      ),
     },
   ];
 
@@ -51,20 +38,16 @@ function GlobeComponent() {
   />
 </svg>`;
 
-  // Generate random data
-
   const myCordinates = [
-    { lat: 39.0458, lng: -76.641 },
-    { lat: 31.9686, lng: -99.9018 },
-    { lat: 27.994402, lng: -81.760254 },
-    { lat: 47.7511, lng: -120.7401 },
+    { lat: 39.0458, lng: -76.641, city: "MarryLand" },
+    { lat: 31.9686, lng: -99.9018, city: "Taxes" },
+    { lat: 27.994402, lng: -81.760254, city: "Florida" },
+    { lat: 47.7511, lng: -120.7401, city: "Washington" },
   ];
 
   const gData = myCordinates.map((coordinates) => ({
     lat: coordinates.lat,
     lng: coordinates.lng,
-    // size: 7 + Math.random() * 30,
-    // color: ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
   }));
 
   useEffect(() => {
@@ -73,14 +56,11 @@ function GlobeComponent() {
         globeRef.current.controls().enableZoom = false;
         globeRef.current.controls().autoRotate = false;
         globeRef.current.controls().autoRotateSpeed = 0.3;
-        console.log(globeRef.current.getGlobeRadius(), "reef globe");
       }
     }, 100);
 
     return () => clearTimeout(timer);
   }, [globeRef.current]);
-
-  const customPointColor = (city) => city.svg;
 
   return (
     <section
@@ -88,56 +68,49 @@ function GlobeComponent() {
       style={{ position: "relative" }}
     >
       <div className="" style={{ width: "100%", paddingBottom: "75%" }}>
-        {/* <SizeMe>
-          {({ size: { width, height } }) => ( */}
-        <Globe
-          ref={globeRef}
-          // width={width}
-          // height={(width / 4) * 9}
-
-          globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
-          htmlElement={(d) => {
-            const el = document.createElement("div");
-            el.className = "custom-markerss";
-            el.innerHTML = markerSvg;
-            el.style["pointer-events"] = "auto";
-            el.style.cursor = "pointer";
-            el.onmouseenter = () => console.log(<TooltipEl />);
-            const tooltip = document.createElement("div");
-            tooltip.className = "tooltipss";
-            tooltip.textContent = "Tooltip Text"; // Replace with your desired tooltip text
-            tooltip.style.display = "none"; // Initially hide the tooltip
-
-            // Handle mouse enter event to show the tooltip
-            el.onmouseenter = () => {
-              tooltip.style.display = "block"; // Show the tooltip on hover
-            };
-
-            // Handle mouse leave event to hide the tooltip
-            el.onmouseleave = () => {
-              tooltip.style.display = "none"; // Hide the tooltip when the mouse leaves
-            };
-
-            // Append the tooltip to the div
-            el.appendChild(tooltip);
-            return el;
-          }}
-          htmlElementsData={gData}
-          backgroundColor="#161616"
-          pointsData={sampleCityData}
-          pointColor={() => "transparent"}
-          pointAltitude={0.001}
-          // pointLabel={"city"}
-          pointRadius="size"
-          hexPolygonsData={countries.features}
-          hexPolygonResolution={4}
-          hexPolygonMargin={0.6}
-          hexPolygonColor={() => "#FE490C"}
-          showAtmosphere={false}
-          showGlobe={false}
-        />
-        {/* )}
-        </SizeMe> */}
+        <SizeMe>
+          {({ size: { width, height } }) => (
+            <Globe
+              ref={globeRef}
+              width={width}
+              height={(width / 4) * 9}
+              globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
+              htmlElement={() => {
+                const el = document.createElement("div");
+                el.className = "custom-markerss";
+                el.innerHTML = markerSvg;
+                el.style["pointer-events"] = "auto";
+                el.style.cursor = "pointer";
+                // el.onmouseenter = () => console.log(<TooltipEl />);
+                const tooltip = document.createElement("div");
+                tooltip.className = "tooltipss";
+                tooltip.textContent = "Tooltip Text";
+                tooltip.style.display = "none";
+                el.onmouseenter = () => {
+                  tooltip.style.display = "block";
+                };
+                el.onmouseleave = () => {
+                  tooltip.style.display = "none";
+                };
+                el.appendChild(tooltip);
+                return el;
+              }}
+              htmlElementsData={gData}
+              backgroundColor="#161616"
+              pointsData={sampleCityData}
+              pointColor={() => "transparent"}
+              pointAltitude={0.001}
+              // pointLabel={"city"}
+              pointRadius="size"
+              hexPolygonsData={countries.features}
+              hexPolygonResolution={4}
+              hexPolygonMargin={0.6}
+              hexPolygonColor={() => "#FE490C"}
+              showAtmosphere={false}
+              showGlobe={false}
+            />
+          )}
+        </SizeMe>
       </div>
     </section>
   );

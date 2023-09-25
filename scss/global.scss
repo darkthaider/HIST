@@ -215,27 +215,27 @@ html {
   // }
 }
 
-.cutomTool,
-.tooltipss {
-  color: white;
-  text-align: center;
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    background-color: red;
-    height: 121px;
-    width: 1px;
-    rotate: 30deg;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    background-color: #fff;
-    height: 41px;
-    width: 1px;
-    rotate: 80deg;
-    top: -16px;
-    left: 1366px;
-  }
-}
+// .cutomTool,
+// .tooltipss {
+//   color: white;
+//   text-align: center;
+//   position: relative;
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     background-color: red;
+//     height: 121px;
+//     width: 1px;
+//     rotate: 30deg;
+//   }
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     background-color: #fff;
+//     height: 41px;
+//     width: 1px;
+//     rotate: 80deg;
+//     top: -16px;
+//     left: 59.7%;
+//   }
+// }
