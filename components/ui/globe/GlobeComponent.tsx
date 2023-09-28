@@ -3,16 +3,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import Globe from "react-globe.gl";
-import { countries } from "./countries";
 import { SizeMe } from "react-sizeme";
-import CustomPointer from "./customPointer";
-import globeImg from "../../../public/globe.png";
-import marker from "../../../public/dragCursor.svg";
-import TooltipEl from "./tooltip";
-import marker from "../../../public/dragCursor.svg";
+import { countries } from "./countries";
+// import marker from "../../../public/dragCursor.svg";
 
 function GlobeComponent() {
   const globeRef = useRef();
+  const [focusCoordinate, setFocusCoordinate] = useState(null);
   const markerSvg = `    <svg
     xmlns="http://www.w3.org/2000/svg"
     width="19"
@@ -31,6 +28,7 @@ function GlobeComponent() {
     { lat: 31.9686, lng: -99.9018, city: "Texas" },
     { lat: 27.994402, lng: -81.760254, city: "Florida" },
     { lat: 47.7511, lng: -120.7401, city: "Washington" },
+    { lat: 30.3753, lng: 69.3451, city: "Pakistan" },
   ];
 
   const gData = myCordinates.map((coordinates) => ({
@@ -50,6 +48,29 @@ function GlobeComponent() {
 
     return () => clearTimeout(timer);
   }, [globeRef.current]);
+  // const focusOnCoordinate = (coordinate) => {
+  //   setFocusCoordinate(coordinate);
+  //   if (globeRef.current) {
+  //     globeRef.current.controls().autoRotate = true;
+  //     globeRef.current.controls().autoRotateSpeed = 0.3;
+  //     globeRef.current.controls().autoRotateLat = coordinate.lat;
+  //     globeRef.current.controls().autoRotateLng = coordinate.lng;
+  //   }
+  // };
+
+  // // Call focusOnCoordinate with a specific coordinate when needed
+  // useEffect(() => {
+  //   // Example: Auto-rotate to the first coordinate in your data after a delay
+  //   const delay = setTimeout(() => {
+  //     if (gData.length > 0) {
+  //       focusOnCoordinate(gData[0]);
+  //     }
+  //   }, 2000); // Adjust the delay time as needed
+
+  //   return () => {
+  //     clearTimeout(delay);
+  //   };
+  // }, []);
 
   return (
     <section

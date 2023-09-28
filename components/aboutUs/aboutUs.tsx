@@ -58,12 +58,12 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
         <div className="desc-16-20 text-hist_white-500 capitalize flex">
           <span className="subtitle-rectangle"></span>About Us / Mission
         </div>
-        <TextAnimation>
-          <h2 className="about-us-title-mb title-32-76 text-hist_white-900 mt-6 max-w-[1190px]">
-            With experience for over 25 years distributing and consultancy we
-            are well structured throughout <br /> 4 continents.
-          </h2>
-        </TextAnimation>
+        {/* <TextAnimation> */}
+        <h2 className="about-us-title-mb title-32-76 text-hist_white-900 mt-6 max-w-[1190px]">
+          With experience for over 25 years distributing and consultancy we are
+          well structured throughout <br /> 4 continents.
+        </h2>
+        {/* </TextAnimation> */}
         <ul>
           {faqData.map((item) => (
             <li
