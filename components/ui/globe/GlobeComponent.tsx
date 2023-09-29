@@ -5,7 +5,10 @@ import { useEffect, useRef, useState } from "react";
 import Globe from "react-globe.gl";
 import { SizeMe } from "react-sizeme";
 import { countries } from "./countries";
-// import marker from "../../../public/dragCursor.svg";
+import CustomPointer from "./customPointer";
+import globeImg from "../../../public/globe.png";
+import TooltipEl from "./tooltip";
+import marker from "../../../public/dragCursor.svg";
 
 function GlobeComponent() {
   const globeRef = useRef();
