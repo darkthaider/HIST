@@ -77,6 +77,18 @@ function GlobeComponent() {
       className="hist-outer-container  overflow-hidden customGlobeContainer relative h-screen"
       style={{ position: "relative" }}
     >
+      <div className="hist-inner-container sm:text-center text-left locationText">
+        <div className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center">
+          <span className="subtitle-rectangle"></span>
+          Locations
+        </div>
+        {/* <TextAnimation> */}
+        <h2 className="title-32-76 text-hist_white-900 max-w-[1020px] m-auto mt-[22px] ">
+          We are worldwide. <br /> Operating across emerging markets that are
+          ripe for the taking...
+        </h2>
+        {/* </TextAnimation> */}
+      </div>
       <div className="" style={{ width: "100%", paddingBottom: "75%" }}>
         <SizeMe>
           {({ size: { width, height } }) => (

@@ -146,42 +146,8 @@ html {
   line-height: 150%;
 }
 
-.scene-tooltip {
-  // background-color: red;
-  color: aqua !important;
-  padding: 12px;
-  position: relative;
-  // &:after {
-  //   content: "";
-  //   background-color: red;
-  //   height: 50px;
-  //   width: 2px;
-  //   top: 0;
-  //   position: absolute;
-  // }
-}
-
-.customGlobeContainer {
-  // div {
-  //   width: clamp(64.8125rem, 36.2302rem + 121.9512vw, 167.9375rem) !important;
-  //   height: clamp(40.375rem, 25.5815rem + 63.119vw, 93.75rem) !important;
-  //   // width: 5476px !important;
-  //   height: 700px !important;
-  // }
-  canvas {
-    // position: absolute;
-    // left: clamp(-28.5rem, -22.1142rem + -5.9128vw, -28.5rem) !important;
-    // width: 100% !important;
-    // height: 100% !important;
-    // // bottom: -668px;
-    // top: -17%;
-  }
-}
-
 .custom-markerss {
-  // background-color: rgb(14, 211, 21);
   color: #fff;
-  // border: 1px solid #fff;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -211,45 +177,17 @@ html {
   position: absolute;
   bottom: 120px;
   left: 0;
-  // &:after {
-  //   content: "";
-  //   background-color: green;
-  //   height: 50px;
-  //   width: 9px;
-  //   top: 0;
-  //   position: absolute;
-  // }
-  // &:before {
-  //   content: "";
-  //   background-color: blue;
-  //   height: 50px;
-  //   width: 9px;
-  //   top: 10px;
-  //   position: absolute;
-  // }
 }
 
-// .cutomTool,
-// .tooltipss {
-//   color: white;
-//   text-align: center;
-//   position: relative;
-//   &:after {
-//     content: "";
-//     position: absolute;
-//     background-color: red;
-//     height: 121px;
-//     width: 1px;
-//     rotate: 30deg;
-//   }
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     background-color: #fff;
-//     height: 41px;
-//     width: 1px;
-//     rotate: 80deg;
-//     top: -16px;
-//     left: 1366px;
-//   }
-// }
+.locationText {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  top: clamp(7.5rem, 0.4521rem + 21.2766vw, 13.75rem);
+  width: 100%;
+  @media only screen and (max-width: 520px) {
+    position: unset;
+    transform: unset;
+  }
+}

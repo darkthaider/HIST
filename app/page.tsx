@@ -20,7 +20,7 @@ export default function Home() {
       <Services />
       <Testimonials />
       <Industries />
-      <Locations />
+      {/* <Locations /> */}
       <NoSSRWrapper>
         <GlobeComponent />
       </NoSSRWrapper>
