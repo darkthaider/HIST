@@ -23,9 +23,9 @@ export default function Home() {
       <Services />
       <Testimonials />
       <Industries />
-      {/* <NoSSRWrapper>
+      <NoSSRWrapper>
         <GlobeComponent />
-      </NoSSRWrapper> */}
+      </NoSSRWrapper>
       <Process />
       <AboutUs />
       <Footer />
