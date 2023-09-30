@@ -8,7 +8,7 @@ import { countries } from "./countries";
 
 function GlobeComponent() {
   const globeRef = useRef();
-  const markerSvg = `    <svg
+  const markerSvg = `<svg
     xmlns="http://www.w3.org/2000/svg"
     width="19"
     height="23"
@@ -41,12 +41,12 @@ function GlobeComponent() {
       if (globeRef.current) {
         globeRef.current.controls().enableZoom = false;
         globeRef.current.controls().autoRotate = true;
-        globeRef.current.controls().autoRotateSpeed = 0.6;
+        globeRef.current.controls().autoRotateSpeed = 0.3;
       }
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [globeRef.current]);
+  }, []);
 
   return (
     <section

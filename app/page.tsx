@@ -18,17 +18,14 @@ export default function Home() {
       <div className="fixed">
         <Particle />
       </div>
-
       <Hero />
-
       <Experience />
       <Services />
       <Testimonials />
       <Industries />
-
-      <NoSSRWrapper>
+      {/* <NoSSRWrapper>
         <GlobeComponent />
-      </NoSSRWrapper>
+      </NoSSRWrapper> */}
       <Process />
       <AboutUs />
       <Footer />
