@@ -55,20 +55,36 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
       className="hist-outer-container vertical-padding-48-82"
     >
       <div className="hist-inner-container">
-        <div className="desc-16-20 text-hist_white-500 capitalize flex">
+        <div
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          className="desc-16-20 text-hist_white-500 capitalize flex"
+        >
           <span className="subtitle-rectangle"></span>About Us / Mission
         </div>
-        {/* <TextAnimation> */}
-        <h2 className="about-us-title-mb title-32-76 text-hist_white-900 mt-6 max-w-[1190px]">
+
+        <h2
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          data-aos-delay="200"
+          className="about-us-title-mb title-32-76 text-hist_white-900 mt-6 max-w-[1190px]"
+        >
           With experience for over 25 years distributing and consultancy we are
           well structured throughout <br /> 4 continents.
         </h2>
-        {/* </TextAnimation> */}
+
         <ul>
-          {faqData.map((item) => (
+          {faqData.map((item, index) => (
             <li
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+              data-aos-delay={index * 100 + 300}
               key={item.id}
-              className="pb-6 mb-8 border-b border-hist_white-200"
+              onClick={() => faqToggleHandler(item.id)}
+              className="pb-6 mb-8 border-b border-hist_white-200 cursor-pointer"
             >
               <div className="sm:flex justify-between items-center">
                 <div className="mr-5 mb-4 sm:mb-0 md:mr-10">
@@ -123,7 +139,6 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
                     </span>
                   </div>
                   <button
-                    onClick={() => faqToggleHandler(item.id)}
                     className={`min-w-[24px] bg-faqBtn rounded-[4px] shadow-faqBtnShadow backdrop-blur-[229px]`}
                   >
                     <svg

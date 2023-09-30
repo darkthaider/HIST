@@ -9,9 +9,9 @@ const TextAnimation: FC<any> = ({ children }) => {
     <div
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translateY(200px)",
+        transform: isInView ? "none" : "translateY(50px)",
         opacity: isInView ? 1 : 0,
-        transition: "all 0.9s linear 0.5s",
+        transition: "all 0.5s linear 0.5s",
       }}
     >
       {children}

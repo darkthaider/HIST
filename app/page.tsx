@@ -10,17 +10,22 @@ import Footer from "@/components/ui/footer/footer";
 import Particle from "@/components/particles/particles";
 import GlobeComponent from "@/components/ui/globe/GlobeComponent";
 import NoSSRWrapper from "@/components/NoSSRWrapper";
+import TextAnimation from "@/components/ui/textAnimation/textAnimation";
 
 export default function Home() {
   return (
     <main>
-      <Particle />
+      <div className="fixed">
+        <Particle />
+      </div>
+
       <Hero />
+
       <Experience />
       <Services />
       <Testimonials />
       <Industries />
-      {/* <Locations /> */}
+
       <NoSSRWrapper>
         <GlobeComponent />
       </NoSSRWrapper>

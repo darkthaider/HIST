@@ -17,7 +17,12 @@ const Footer: FC<footerProps> = ({}) => {
       <footer className="vertical-padding-48-82 hist-outer-container overflow-hidden relative">
         <div className="hist-inner-container">
           <div className="text-center">
-            <div className="flex justify-center">
+            <div
+              className="flex justify-center"
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+            >
               <Link href="/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,12 +55,22 @@ const Footer: FC<footerProps> = ({}) => {
                 </svg>
               </Link>
             </div>
-            <h2 className="title-32-76 text-hist_white-900 mt-6 mb-8">
+            <h2
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+              data-aos-delay="200"
+              className="title-32-76 text-hist_white-900 mt-6 mb-8"
+            >
               Ready to scale and <br /> reach new horizons...
             </h2>
             <button
               onClick={handleFormToggle}
               className="bg-startBtn p-[2px] inline-block rounded-full"
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+              data-aos-delay="300"
             >
               <span className="text-[20px] text-hist_black inline-block md:inline-flex font-normal bg-hist_white-900 md:text-[32px] px-[48px] md:pb-1 pt-2 md:pt-3 rounded-full">
                 START
@@ -63,7 +78,13 @@ const Footer: FC<footerProps> = ({}) => {
             </button>
           </div>
         </div>
-        <div className="flex mdMax:flex-col mdMax:justify-center mdMax:items-center mdMax:gap-[20px] md:justify-between md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 mt-[150px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px] items-end">
+        <div
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          data-aos-delay="400"
+          className="flex mdMax:flex-col mdMax:justify-center mdMax:items-center mdMax:gap-[20px] md:justify-between md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 mt-[150px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px] items-end"
+        >
           <span className="text-[14px] md:text-[16px] text-hist_white-500">
             Ⓒ 2023 HIST®. All rights reserved.
           </span>

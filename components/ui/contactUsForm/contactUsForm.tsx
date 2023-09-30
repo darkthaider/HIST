@@ -43,24 +43,30 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
           if (res.status === 200) {
             console.log(res);
             setRequestStatus("sent");
+            setTimeout(() => {
+              handleFormToggle();
+            }, 1000);
           }
         })
         .catch((err) => {
           console.log(err);
           setRequestStatus("error");
+          setTimeout(() => {
+            handleFormToggle();
+          }, 1000);
         });
     }
   };
   return (
     <motion.div
-      initial={{ scale: 0.5, skew: 20 }}
-      animate={{ scale: 1, skew: 0 }}
+      initial={{ opacity: 0.5 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-10"
     >
       <div
         onClick={handleFormToggle}
-        className="h-[100%] w-[100%] bg-hist_overlay backdrop-blur-[8px]"
+        className="h-[100%] w-[100%] bg-hist_overlay"
       ></div>
       <div className="absolute w-[100%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] bg-hist_black rounded-[8px] border border-[#343434] max-w-[516px] p-[32px] md:p-[56px] z-10">
         <div className="flex flex-col items-center text-center">
@@ -76,7 +82,9 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
               fill="#FE490C"
             />
           </svg>
-          <h4 className="contact-us-form-title mt-8 mb-3">Contact Us</h4>
+          <h4 className="contact-us-form-title mt-8 mb-3 text-hist_white-900">
+            Contact Us
+          </h4>
           <p className="mb-8 contact-us-form-desc text-hist_white-500 max-w-[328px]">
             Let{"'"}s partner and see how we can help you grow your company.
           </p>
@@ -146,18 +154,33 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
           </div>
 
           <div className="mt-12">
-            <button
-              type="submit"
-              className={`flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border duration-300 bg-hist_black pt-4 pb-2 hover:bg-hist_red hover:border-hist_red ${
-                requestStatus === "sent"
-                  ? "border-[#199255] bg-[#199255] text-[#ffffff]"
-                  : ""
-              }`}
-            >
-              {requestStatus === "" && "Submit"}
-              {requestStatus === "loading" && "..."}
-              {requestStatus === "sent" && "Sent"}
-            </button>
+            {requestStatus === "" && (
+              <button
+                type="submit"
+                className={`flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border text-hist_white-900 duration-300 bg-hist_black pt-3 pb-1 hover:bg-hist_red hover:border-hist_red `}
+                disabled={requestStatus !== "" ? true : false}
+              >
+                Submit
+              </button>
+            )}
+            {requestStatus === "loading" && (
+              <button
+                type="button"
+                className={`flex items-center w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 cursor-progress transition-border duration-300 bg-hist_white-900 h-[48px]`}
+                disabled={true}
+              >
+                <span className="loader"></span>
+              </button>
+            )}
+            {requestStatus === "sent" && (
+              <button
+                type="button"
+                className={`flex items-center w-full text-[20px] font-[500] justify-center rounded-[8px] border  transition-border duration-300 border-[#199255] bg-[#199255] text-[#ffffff] h-[48px] `}
+                disabled={true}
+              >
+                Sent
+              </button>
+            )}
           </div>
         </form>
       </div>

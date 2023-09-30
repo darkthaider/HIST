@@ -81,18 +81,34 @@ function GlobeComponent() {
       style={{ position: "relative" }}
     >
       <div className="hist-inner-container sm:text-center text-left locationText">
-        <div className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center">
+        <div
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center"
+        >
           <span className="subtitle-rectangle"></span>
           Locations
         </div>
-        {/* <TextAnimation> */}
-        <h2 className="title-32-76 text-hist_white-900 max-w-[1020px] m-auto mt-[22px] ">
+
+        <h2
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          data-aos-delay="200"
+          className="title-32-76 text-hist_white-900 max-w-[1020px] m-auto mt-[22px] "
+        >
           We are worldwide. <br /> Operating across emerging markets that are
           ripe for the taking...
         </h2>
-        {/* </TextAnimation> */}
       </div>
-      <div className="" style={{ width: "100%", paddingBottom: "75%" }}>
+      <div
+        data-aos-once={true}
+        data-aos="fade-up"
+        data-aos-duration={1000}
+        data-aos-delay="300"
+        style={{ width: "100%", paddingBottom: "75%" }}
+      >
         <SizeMe>
           {({ size: { width, height } }) => (
             <Globe
