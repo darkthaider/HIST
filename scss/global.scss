@@ -125,6 +125,14 @@ html {
 .processSlide {
   cursor: url("../public/ahmed.png"), auto !important;
 }
+
+#tsparticles2 {
+  max-width: 200px !important;
+  canvas {
+    position: absolute !important;
+    border-radius: 50%;
+  }
+}
 .contact-us-form-title {
   font-size: clamp(1.5rem, 1.3614rem + 0.5913vw, 2rem);
   font-style: normal;
@@ -136,4 +144,74 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+
+.custom-markerss {
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: relative;
+  &:hover {
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      height: 109px;
+      width: 1px;
+      /* rotate: 30deg; */
+      bottom: 18px;
+      left: 8px;
+    }
+  }
+}
+
+.tooltipss {
+  padding: 12px;
+  width: 100px;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+}
+
+.locationText {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  top: clamp(7.5rem, 0.4521rem + 21.2766vw, 13.75rem);
+  width: 100%;
+  @media only screen and (max-width: 520px) {
+    position: unset;
+    transform: unset;
+  }
+}
+.loader {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  box-shadow: 16px 0 #000, -16px 0 #000;
+  position: relative;
+  animation: flash 2s ease-out infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    background-color: rgb(22 22 22 / 80%);
+    box-shadow: 16px 0 rgb(22 22 22 / 80%), -16px 0 rgb(22 22 22 / 80%);
+  }
+  50% {
+    background-color: rgb(22 22 22 / 30%);
+    box-shadow: 16px 0 rgb(22 22 22 / 30%), -16px 0 rgb(22 22 22 / 30%);
+  }
+  100% {
+    background-color: rgb(22 22 22 / 60%);
+    box-shadow: 16px 0 rgb(22 22 22 / 60%), -16px 0 rgb(22 22 22 / 60%);
+  }
 }

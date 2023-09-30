@@ -1,12 +1,20 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 interface heroProps {}
 
 const Hero: FC<heroProps> = ({}) => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <section
-        className="hist-outer-container mdMax:mt-[48px] vertical-padding-48-82 overflow-hidden relative"
+        className="hist-outer-container mdMax:mt-[48px] vertical-padding-48-82 relative"
         style={{ paddingBottom: "0" }}
       >
         <div className="mdMax:flex mdMax:justify-end md:absolute md:translate-y-[-100px] md:right-[-80px] lg:translate-y-0 lg:right-0 md:max-w-[50%] xl:max-w-[100%]">
@@ -39,10 +47,21 @@ const Hero: FC<heroProps> = ({}) => {
         </div>
         <div className="hist-inner-container">
           <div className="mdMax:text-center">
-            <h1 className="text-hist_white-900 hero-title-56-128 mdMax:mt-[48px] mb-4 xl:mt-[70px]">
+            <h1
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+              className="text-hist_white-900 hero-title-56-128 mdMax:mt-[48px] mb-4 xl:mt-[70px]"
+            >
               Modern <br /> Strategists of <br /> Distribution
             </h1>
-            <p className="hero-desc-18-32 text-hist_white-800 ">
+            <p
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+              data-aos-delay="200"
+              className="hero-desc-18-32 text-hist_white-800 "
+            >
               Hist® partnering with medical companies to <br /> expand &
               dominate new markets.
             </p>

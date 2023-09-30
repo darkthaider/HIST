@@ -126,6 +126,7 @@ const Header: FC<headerProps> = ({}) => {
           <nav className="mdMax:absolute mdMax:h-screen mdMax:left-0 mdMax:pt-[100px] mdMax:top-0 mdMax:flex mdMax:flex-col mdMax:w-[100%] mdMax:gap-[48px] mdMax:z-[-1] md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center mdMax:overflow-auto">
             {navLinks.map((item) => (
               <Link
+                // prefetch={true}
                 key={item.link}
                 href={item.link}
                 className={`mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-hist_white-900 duration-300 md:pt-1 underline-offset-2 ${
@@ -165,7 +166,7 @@ const Header: FC<headerProps> = ({}) => {
         </div>
       </header>
       <div
-        className={`mdMax:hidden fixed left-[50%] transition-all duration-300 translate-x-[-50%] z-10 backdrop-blur-[25px] rounded-[8px] px-8 py-4 border-2 border-hist_white-100 bg-hist_white-100 ${
+        className={`mdMax:hidden fixed left-[50%] transition-all duration-300 translate-x-[-50%] z-10 backdrop-blur-[25px] rounded-[8px] px-8 py-3 border-2 border-hist_white-100 bg-hist_white-100 ${
           isStickyNav
             ? "bottom-[40px] translate-y-[0px]"
             : "translate-y-[100%] bottom-0"

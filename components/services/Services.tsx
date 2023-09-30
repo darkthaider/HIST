@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TextAnimation from "../ui/textAnimation/textAnimation";
 import styles from "./service.module.scss";
 import servicesImg from "@/public/services.png";
 
@@ -28,31 +29,37 @@ const Services = () => {
       className="vertical-padding-48-82 hist-outer-container"
     >
       <div className="hist-inner-container sm:text-center text-left">
-        <div className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center">
+        <div
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center"
+        >
           <span className="subtitle-rectangle"></span>
           services
         </div>
+        {/* <TextAnimation> */}
         <h2
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          data-aos-delay="200"
           className={`${styles.serviceTitle} title-32-76 text-hist_white-900 lgMax:max-w-[600px] max-w-[880px] mb-[16px] mt-[28px] mx-auto }`}
         >
           Claim Sovereignty Over New Territory and subtitle.
         </h2>
 
-        <p className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]">
+        <p
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          data-aos-delay="300"
+          className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]"
+        >
           We provide high quality end to end services & tools to help grow with
           you and plant your companies flag in new markets!
         </p>
-        <div className="relative min-h-[200px] mt-[240px] mdMax:hidden">
-          <Image
-            loading="lazy"
-            src={servicesImg.src}
-            alt=""
-            objectFit="contain"
-            // width={100}
-            // height={100}
-            fill={true}
-          />
-        </div>
+        {/* </TextAnimation> */}
         <div className={`${styles.allServices} md:hidden mt-[56px]`}>
           {services.map((data) => (
             <div key={data.number} className="mt-[28px]">

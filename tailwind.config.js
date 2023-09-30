@@ -27,7 +27,7 @@ module.exports = {
     colors: {
       hist_red: "#FE490C",
       hist_black: "#161616",
-      hist_overlay: "#15151580",
+      hist_overlay: "#151515c2",
       hist_white: {
         100: "#ffffff1a" /* 0.10 */,
         200: "#ffffff33" /* 0.20 */,

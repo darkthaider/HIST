@@ -20,7 +20,12 @@ const Testimonials: FC<any> = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const swiperRef = useRef(null);
   return (
-    <section className="hist-outer-container vertical-padding-48-82">
+    <section
+      data-aos-once={true}
+      data-aos="fade-up"
+      data-aos-duration={1000}
+      className="hist-outer-container vertical-padding-48-82"
+    >
       <div className="hist-inner-container">
         <div className="flex md:justify-center">
           <svg

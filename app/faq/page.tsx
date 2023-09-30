@@ -1,5 +1,8 @@
 "use client";
-import React, { FC, useState } from "react";
+import Particle from "@/components/particles/particles";
+import React, { FC, useEffect, useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 interface pageProps {}
 
@@ -51,29 +54,51 @@ const FAQ: FC<pageProps> = ({}) => {
     setFaqData(updatedFaqData);
   };
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <section className="hist-outer-container pt-8 mdMax:pt-[120px] pb-8 xl:pt-16 xl:pb-16">
+      <div className="fixed">
+        <Particle />
+      </div>
       <div className="hist-inner-container">
-        <div className="">
+        <div
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          className=""
+        >
           <span className="subtitle-rectangle"></span>
           <span className="subtitle-20-24 text-hist_white-500">FAQs</span>
         </div>
-        <h2 className="mt-5 mb-[124px] text-hist_white-900 title-32-76 max-w-[900px] font-normal">
+        <h2
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          data-aos-delay="200"
+          className="mt-5 mb-[124px] text-hist_white-900 title-32-76 max-w-[900px] font-normal"
+        >
           Let&#39;s take a look at things you have on your mind.
         </h2>
 
         <ul>
-          {faqData.map((item) => (
+          {faqData.map((item, index) => (
             <li
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+              data-aos-delay={index * 100 + 300}
+              onClick={() => faqToggleHandler(item.id)}
               key={item.id}
-              className="pb-6 mb-8 border-b border-hist_white-200"
+              className="pb-6 mb-8 border-b border-hist_white-200 cursor-pointer"
             >
               <div className="flex justify-between items-start">
                 <h4 className="faq-title-20-32 text-hist_white-900 mr-4">
                   {item.title}
                 </h4>
                 <button
-                  onClick={() => faqToggleHandler(item.id)}
                   className={`min-w-[24px] bg-faqBtn rounded-[4px] shadow-faqBtnShadow backdrop-blur-[229px]`}
                 >
                   <svg
