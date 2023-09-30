@@ -14,10 +14,15 @@ const Hero: FC<heroProps> = ({}) => {
   return (
     <>
       <section
-        className="hist-outer-container mdMax:mt-[48px] vertical-padding-48-82 relative"
+        className="hist-outer-container mdMax:mt-[48px] vertical-padding-48-82 relative overflow-hidden"
         style={{ paddingBottom: "0" }}
       >
-        <div className="mdMax:flex mdMax:justify-end md:absolute md:translate-y-[-100px] md:right-[-80px] lg:translate-y-0 lg:right-0 md:max-w-[50%] xl:max-w-[100%]">
+        <div
+          data-aos-once={true}
+          data-aos="fade-up"
+          data-aos-duration={1000}
+          className="mdMax:flex mdMax:justify-end md:absolute md:translate-y-[-100px] md:right-[-80px] lg:translate-y-0 lg:right-0 md:max-w-[50%] xl:max-w-[100%]"
+        >
           <svg
             className="hidden md:block"
             xmlns="http://www.w3.org/2000/svg"
