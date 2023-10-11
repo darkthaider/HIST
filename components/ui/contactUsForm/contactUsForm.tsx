@@ -58,12 +58,7 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
     }
   };
   return (
-    <motion.div
-      initial={{ opacity: 0.5 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-10"
-    >
+    <div className="fixed inset-0 z-10">
       <div
         onClick={handleFormToggle}
         className="h-[100%] w-[100%] bg-hist_overlay"
@@ -184,7 +179,7 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
           </div>
         </form>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

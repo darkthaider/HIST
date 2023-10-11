@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import ContactUsForm from "../contactUsForm/contactUsForm";
-import { AnimatePresence } from "framer-motion";
 
 interface headerProps {}
 
@@ -194,9 +193,7 @@ const Header: FC<headerProps> = ({}) => {
           </button>
         </nav>
       </div>
-      <AnimatePresence>
-        {isContactForm && <ContactUsForm handleFormToggle={handleFormToggle} />}
-      </AnimatePresence>
+      {isContactForm && <ContactUsForm handleFormToggle={handleFormToggle} />}
     </>
   );
 };

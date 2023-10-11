@@ -46,7 +46,7 @@ const Services = () => {
           data-aos-delay="200"
           className={`${styles.serviceTitle} title-32-76 text-hist_white-900 lgMax:max-w-[600px] max-w-[880px] mb-[16px] mt-[28px] mx-auto }`}
         >
-          Claim Sovereignty Over New Territory and subtitle.
+          Claim Sovereignty Over New Markets and Build Your Empire.
         </h2>
 
         <p
@@ -57,7 +57,7 @@ const Services = () => {
           className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]"
         >
           We provide high quality end to end services & tools to help grow with
-          you and plant your companies flag in new markets!
+          you and plant your {"company's"} flag in new markets!
         </p>
         {/* </TextAnimation> */}
         <div className={`${styles.allServices} md:hidden mt-[56px]`}>

@@ -28,7 +28,7 @@ export const processCard = [
       </svg>
     ),
     title: "Kick Start",
-    desc: "Initital Steps After the intro call we Research the current market conditions in each country to identify any potential issues that may impact your distribution strategy.",
+    desc: "In order to get started we set up a initial call to get to know your needs and company better.",
   },
   {
     icon: (
@@ -61,7 +61,7 @@ export const processCard = [
       </svg>
     ),
     title: "Understanding",
-    desc: "Develop a comprehensive understanding of the customers and their needs in each country.",
+    desc: "We delve into the market conditions and obtain a comprehensive understanding of your customers and potential market expansion through due diligence and targeted research",
   },
   {
     icon: (
@@ -94,7 +94,7 @@ export const processCard = [
       </svg>
     ),
     title: "Strategy",
-    desc: "Strategy Consider the competitive landscape in each country and understand how your product offering could differentiate itself from others. Develop a comprehensive marketing strategy to ensure your product is properly positioned in each country and that customers are aware of its availability.",
+    desc: "We devise a unique strategy for each market you seek to move into swiftly. We put together a plan to differentiate your product and properly position your company to win.",
   },
   {
     icon: (
@@ -125,7 +125,7 @@ export const processCard = [
       </svg>
     ),
     title: "Regulation",
-    desc: "Regulation Analyze the regulatory and legal requirements for each country and ensure your product meets all necessary compliance standards.",
+    desc: "Analyze the regulatory and legal requirements for each country and ensure your product meets all necessary compliance standards.",
   },
   {
     icon: (
@@ -156,7 +156,7 @@ export const processCard = [
       </svg>
     ),
     title: "Partnerships",
-    desc: "Partnerships Create in-country partnerships with local distributors who can support your product launch and help you quickly scale into new markets",
+    desc: "Create in-country partnerships with local distributors who can support your product launch and help you quickly scale into new markets",
   },
   {
     icon: (
@@ -187,6 +187,6 @@ export const processCard = [
       </svg>
     ),
     title: "Execute",
-    desc: "Execute Evaluate the logistics and supply chain requirements for each country and identify any potential bottlenecks.",
+    desc: "Evaluate the logistics and supply chain requirements for each country and identify any potential bottlenecks. Work in unison to get things done.",
   },
 ];

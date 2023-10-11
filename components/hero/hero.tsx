@@ -67,8 +67,8 @@ const Hero: FC<heroProps> = ({}) => {
               data-aos-delay="200"
               className="hero-desc-18-32 text-hist_white-800 "
             >
-              Hist® partnering with medical companies to <br /> expand &
-              dominate new markets.
+              Hist® partnering with innovative companies to <br /> expand and
+              enter new markets.
             </p>
           </div>
         </div>

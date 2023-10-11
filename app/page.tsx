@@ -1,5 +1,3 @@
-"use client";
-
 import Experience from "@/components/experience/Experience";
 import Services from "@/components/services/Services";
 import Hero from "@/components/hero/hero";
@@ -12,24 +10,8 @@ import Footer from "@/components/ui/footer/footer";
 import Particle from "@/components/particles/particles";
 import GlobeComponent from "@/components/ui/globe/GlobeComponent";
 import NoSSRWrapper from "@/components/NoSSRWrapper";
-import TextAnimation from "@/components/ui/textAnimation/textAnimation";
-import React, { useEffect, useState } from "react";
-
-const LazyGlobeComponent = React.lazy(
-  () => import("@/components/ui/globe/GlobeComponent")
-);
 
 export default function Home() {
-  const [showGlobe, setShowGlobe] = useState(false);
-  useEffect(() => {
-    const delay = 2000;
-    const timer = setTimeout(() => {
-      setShowGlobe(true);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <main>
       <div className="fixed">
@@ -40,9 +22,9 @@ export default function Home() {
       <Services />
       <Testimonials />
       <Industries />
+      {/* <GlobeComponent /> */}
       <NoSSRWrapper>
-        {/* <GlobeComponent /> */}
-        {showGlobe && <GlobeComponent />}
+        <GlobeComponent />
       </NoSSRWrapper>
       <Process />
       <AboutUs />

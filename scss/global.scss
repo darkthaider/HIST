@@ -215,3 +215,60 @@ html {
     box-shadow: 16px 0 rgb(22 22 22 / 60%), -16px 0 rgb(22 22 22 / 60%);
   }
 }
+// .flip-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+// }
+
+// .flippingText {
+//   display: flex;
+//   font-size: 24px;
+// }
+
+// .flip-container-word {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   transition: opacity 0.5s ease, transform 0.5s ease;
+// }
+
+// .flip-container-visible {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+
+// .flip-container-hidden {
+//   opacity: 0;
+//   transform: translateY(-20px);
+// }
+
+.flip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.flippingText {
+  display: flex;
+  font-size: 24px;
+}
+
+.word {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cursor {
+  animation: blinkCursor 0.5s infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
