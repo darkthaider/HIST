@@ -91,7 +91,7 @@ const Process = () => {
             ))}
           </div>
         </Swiper>
-        <div className="absolute w-[100%] flex justify-between top-[50%] translate-y-[-50%] z-10 px-4">
+        <div className="lg:absolute w-[100%] flex justify-center gap-4 mt-4 lg:mt-0 lg:justify-between lg:top-[50%] lg:translate-y-[-50%] z-10 px-4">
           <button
             className="process-button-prev h-[50px] w-[50px] bg-hist_white-900 rounded-full flex justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Previous slide"
