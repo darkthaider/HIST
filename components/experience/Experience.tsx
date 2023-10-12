@@ -22,8 +22,7 @@ const Experience = () => {
           data-aos-delay="200"
           className="title-32-76 text-hist_white-900 lgMax:max-w-[716px] max-w-[1013px] mt-[28px]"
         >
-          With 30+ years of experience we position companies to become
-          Monopolies.
+          With 30+ years of experience we position companies to win.
         </h2>
         <div
           data-aos-once={true}
@@ -39,7 +38,7 @@ const Experience = () => {
             challenging, which is why we work closely with our clients to ensure
             that their products are well received and reach their target
             audience. With our expertise, we help our clients overcome any
-            obstacles and achieve success in the Middle East.
+            obstacles and achieve success!
           </p>
         </div>
       </div>

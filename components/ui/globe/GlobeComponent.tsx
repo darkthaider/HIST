@@ -42,6 +42,12 @@ function GlobeComponent() {
         globeRef.current.controls().enableZoom = false;
         globeRef.current.controls().autoRotate = true;
         globeRef.current.controls().autoRotateSpeed = 0.1;
+        const selectedLocation = {
+          lat: 10.3753,
+          lng: 79.3451,
+          city: "Pakistan",
+        };
+        globeRef.current.pointOfView(selectedLocation, 0);
       }
     }, 100);
 
@@ -69,7 +75,7 @@ function GlobeComponent() {
           data-aos="fade-up"
           data-aos-duration={1000}
           data-aos-delay="200"
-          className="title-32-76 text-hist_white-900 max-w-[1020px] m-auto mt-[22px] "
+          className="title-32-76 text-hist_white-900 max-w-[1300px] m-auto mt-[22px] "
         >
           We are worldwide. <br /> Operating across emerging markets that are
           ripe for the taking...
@@ -88,7 +94,6 @@ function GlobeComponent() {
               ref={globeRef}
               width={width}
               height={(width / 4) * 9}
-              // globeImageUrl="../../../public/globe.png"
               htmlElement={(gData) => {
                 const el = document.createElement("div");
                 el.className = "custom-markerss";

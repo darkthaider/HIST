@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import ContactUsForm from "../contactUsForm/contactUsForm";
-import { AnimatePresence } from "framer-motion";
 
 interface headerProps {}
 
@@ -145,24 +144,31 @@ const Header: FC<headerProps> = ({}) => {
               Contact us
             </button>
           </nav>
-
-          <button
-            onClick={handleNavToggle}
-            className={`text-hist_red md:hidden h-[16px] flex flex-col items-end ${
-              isNavOpen ? "h-[24px] justify-center" : "justify-between"
-            }`}
-          >
-            <span
-              className={`inline-block w-[30px] bg-hist_white-900 h-[1px] transition-all duration-200 ${
-                isNavOpen ? "rotate-45" : ""
+          <div className="flex gap-4 md:hidden items-center">
+            <button
+              onClick={handleFormToggle}
+              className="font-normal bg-hist_red rounded-full text-hist_white pt-[6px] px-[12px]"
+            >
+              Contact us
+            </button>
+            <button
+              onClick={handleNavToggle}
+              className={`text-hist_red h-[16px] flex flex-col items-end ${
+                isNavOpen ? "h-[24px] justify-center" : "justify-between"
               }`}
-            ></span>
-            <span
-              className={`inline-block w-[15px] bg-hist_white-900 h-[1px] transition-transform duration-200 ${
-                isNavOpen ? "w-[30px] rotate-[-45deg]" : ""
-              }`}
-            ></span>
-          </button>
+            >
+              <span
+                className={`inline-block w-[30px] bg-hist_white-900 h-[1px] transition-all duration-200 ${
+                  isNavOpen ? "rotate-45" : ""
+                }`}
+              ></span>
+              <span
+                className={`inline-block w-[15px] bg-hist_white-900 h-[1px] transition-transform duration-200 ${
+                  isNavOpen ? "w-[30px] rotate-[-45deg]" : ""
+                }`}
+              ></span>
+            </button>
+          </div>
         </div>
       </header>
       <div
@@ -194,9 +200,7 @@ const Header: FC<headerProps> = ({}) => {
           </button>
         </nav>
       </div>
-      <AnimatePresence>
-        {isContactForm && <ContactUsForm handleFormToggle={handleFormToggle} />}
-      </AnimatePresence>
+      {isContactForm && <ContactUsForm handleFormToggle={handleFormToggle} />}
     </>
   );
 };

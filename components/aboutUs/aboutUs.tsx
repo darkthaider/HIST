@@ -11,10 +11,10 @@ interface aboutUsProps {}
 const faqInitialData = [
   {
     id: 1,
-    title: "Ahmed Abdelwahab ",
+    title: "Ahmed Abdelwahab",
     desc: "Experienced General Manager with a demonstrated history of working in the hospital & health care industry. Skilled in Negotiation, Business Planning, Medical Devices, Sales, and Oncology. Strong healthcare services professional with a Doctor of Philosophy - PhD focused in Biochemistry from Ain Shams University.",
     isOpen: false,
-    designation: "Founder",
+    designation: "Co-Founder, President",
     avatar: ahmad.src,
   },
   {
@@ -22,15 +22,15 @@ const faqInitialData = [
     title: "Talha Kamran ",
     desc: "I am consistently impressed with the level of professionalism and expertise they bring to the table. Their products are always top quality, and their customer service is unparalleled. I appreciate their dedication to medical research and their commitment to ensuring that patients receive the best possible care. They have made a tangible difference in my work, and I would highly recommend them to anyone in the medical industry.",
     isOpen: false,
-    designation: "Communication & Marketing",
+    designation: "Board Member",
     avatar: talha.src,
   },
   {
     id: 3,
-    title: "Mohammed Abdelwahab ",
+    title: "Mohammed Abdelwahab",
     desc: "Experienced General Manager with a demonstrated history of working in the hospital & health care industry. Skilled in Negotiation, Business Planning, Medical Devices, Sales, and Oncology. Strong healthcare services professional with a Doctor of Philosophy - PhD focused in Biochemistry from Ain Shams University.",
     isOpen: false,
-    designation: "Scientist",
+    designation: "Co-Founder",
     avatar: mohammad.src,
   },
 ];
@@ -71,8 +71,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
           data-aos-delay="200"
           className="about-us-title-mb title-32-76 text-hist_white-900 mt-6 max-w-[1190px]"
         >
-          With experience for over 25 years distributing and consultancy we are
-          well structured throughout <br /> 4 continents.
+          A partnership built to last with a team that cares!
         </h2>
 
         <ul>
