@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       screens: {
         mdMax: { max: "767px" },
-        lgMax: { max: "1024px" },
+        lgMax: { max: "1023px" },
         container: { max: "1320px" },
         minContainer: { min: "1321px" },
         minOuterContainer: { min: "1728px" },
@@ -23,6 +23,8 @@ module.exports = {
       faqBtn:
         "linear-gradient(221deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.00) 100%)",
       startBtn: "linear-gradient(to right, #FE490C 0%, #ffffff 70%)",
+      redWhiteLine:
+        "linear-gradient(0deg, rgba(255, 255, 255, 0.5) 24%, #FE490C 96.2%);",
     },
     colors: {
       hist_red: "#FE490C",
