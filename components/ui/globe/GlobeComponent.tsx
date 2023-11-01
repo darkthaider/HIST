@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Globe from "react-globe.gl";
 import { SizeMe } from "react-sizeme";
 import { countries } from "./countries";
+import { useCallback } from 'react';
 
 function GlobeComponent() {
   const globeRef = useRef();
@@ -53,6 +54,12 @@ function GlobeComponent() {
 
     return () => clearTimeout(timer);
   }, []);
+
+
+
+  const ResCallBack = useCallback(() => 3, [])
+  const MarginCallBack = useCallback(() => 0.6, [])
+  const ColorCallBack = useCallback(() => "#FE490C", [])
 
   return (
     <section
@@ -117,9 +124,9 @@ function GlobeComponent() {
               backgroundColor="#161616"
               // markerData={myCordinates}
               hexPolygonsData={countries.features}
-              hexPolygonResolution={4}
-              hexPolygonMargin={0.6}
-              hexPolygonColor={() => "#FE490C"}
+              hexPolygonResolution={ResCallBack}
+              hexPolygonMargin={MarginCallBack}
+              hexPolygonColor={ColorCallBack}
               showAtmosphere={false}
               showGlobe={false}
             />

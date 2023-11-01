@@ -24,7 +24,7 @@
     width: 1px;
     height: 10px;
     border-radius: 7px;
-    background: rgb(255, 255, 255);
+    background-color: #fe490c;
     transition: 0.5s;
     animation: loading 10s cubic-bezier(.4,1.01,1,1) 1 ;
   }
@@ -39,3 +39,16 @@
     }
   
   }
+
+  // .loaderContainer {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   height: 100vh;
+  //   position: fixed;
+  //   top: 0;
+  //   background: #000;
+  //   width: 100vw;
+  //   z-index: 99;
+  // }
+  
