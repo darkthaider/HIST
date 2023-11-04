@@ -149,8 +149,8 @@ html {
 .custom-markerss {
   color: #fff;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,11 +163,31 @@ html {
       background-color: white;
       height: 109px;
       width: 1px;
-      /* rotate: 30deg; */
+      rotate: 30deg; 
       bottom: 18px;
       left: 8px;
+      bottom: -41%;
+      left: 50%;
+     
+      transform: translate(-50%, -50%)
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      background-color: white;
+      height: 39px;
+      width: 1px;
+      rotate: 86deg;
+      bottom: 18px;
+      left: 8px;
+      bottom: 178%;
+      left: 173%;
     }
   }
+  // svg{
+  //   height: 32px;
+  //   width: 32px;
+  // }
 }
 
 .tooltipss {
@@ -175,8 +195,8 @@ html {
   width: 100px;
   white-space: nowrap;
   position: absolute;
-  bottom: 120px;
-  left: 0;
+  bottom: 103px;
+  left: 115px;
 }
 
 .locationText {
