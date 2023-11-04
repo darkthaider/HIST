@@ -42,7 +42,7 @@ function GlobeComponent() {
     const timer = setTimeout(() => {
       if (globeRef.current) {
         globeRef.current.controls().enableZoom = false;
-        globeRef.current.controls().autoRotate = false;
+        globeRef.current.controls().autoRotate = true;
         globeRef.current.controls().autoRotateSpeed = 0.1;
         const selectedLocation = {
           lat: 10.3753,
