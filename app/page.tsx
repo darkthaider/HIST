@@ -15,9 +15,9 @@ import Loader from "@/components/ui/loader/Loader";
 export default function Home() {
   return (
     <main>
-      {/* <Loader/> */}
+      <Loader/>
       <div className="fixed">
-        <Particle />
+        {/* <Particle /> */}
       </div>
       <Hero />
       <Experience />
