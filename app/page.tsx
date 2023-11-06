@@ -17,7 +17,7 @@ export default function Home() {
     <main>
       <Loader/>
       <div className="fixed">
-        {/* <Particle /> */}
+        <Particle />
       </div>
       <Hero />
       <Experience />
