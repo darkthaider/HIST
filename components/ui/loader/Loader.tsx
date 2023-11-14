@@ -8,49 +8,40 @@ import { gsap } from 'gsap';
 
 
 const Loader = () => {
-  // const loaderRef = useRef(null);
-  const [showLoader, setShowLoader] = useState(true);
+  const loaderRef = useRef(null);
+  // const [showLoader, setShowLoader] = useState(true);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowLoader(false);
-    }, 3000);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setShowLoader(false);
+  //   }, 3000);
 
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timeout);
+  //   };
+  // }, []);
 
 
 
 
   // Gsap timeline to show loader
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   const loaderTimeline = gsap.timeline({ repeat: -1, yoyo: true });
-  //   loaderTimeline.to('.loaderrr', { duration:3, scale: 12 });
-  //   loaderTimeline.to('.loaderrr', { duration: 1, opacity: 0, onComplete: () => {
-  //     // This function is called when the animation is complete.
-  //     // You can do any necessary cleanup or hide the loader container here.
-  //     // const loaderContainer = document.querySelector('.loaderContainer');
-  //     if (loaderRef.current) {
-  //       loaderRef.current.style.display = 'none'; // Hide the loader container
-  //     }
-  //   }});
-  //   return () => {
-  //     loaderTimeline.kill();
-  //   };
-  // }, []);
+    const loaderTimeline = gsap.timeline();
+    loaderTimeline.to('.progresss', { duration:5, width: 150 }).to(loaderRef.current, { duration: 1, y: -1000, onComplete: () => {
+      console.log('Section animation complete');
+    } }); 
+    return () => {
+      loaderTimeline.kill();
+    };
+  }, []);
   return (
     <>
-      {showLoader && (
-        <section className={styles.loaderWrapper}>
-          <div className={styles.progressLoader}>
-            <div className={styles.progress}></div>
+        <section className="loaderrrSection" ref={loaderRef}>
+          <div className="progressLoaderr">
+            <div className="progresss"></div>
           </div>
         </section>
-      )} 
-
     </>
   );
 };
