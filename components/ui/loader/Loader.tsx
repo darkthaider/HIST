@@ -9,28 +9,30 @@ import { gsap } from 'gsap';
 
 const Loader = () => {
   const loaderRef = useRef(null);
-  // const [showLoader, setShowLoader] = useState(true);
-
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setShowLoader(false);
-  //   }, 3000);
-
-  //   return () => {
-  //     clearTimeout(timeout);
-  //   };
-  // }, []);
-
-
-
-
-  // Gsap timeline to show loader
   useEffect(() => {
-
     const loaderTimeline = gsap.timeline();
-    loaderTimeline.to('.progresss', { duration:5, width: 150 }).to(loaderRef.current, { duration: 1, y: -1000, onComplete: () => {
-      console.log('Section animation complete');
-    } }); 
+    loaderTimeline.to('.progresss', { duration: 5, width: 500,  ease: "Power4.Out",
+      onUpdate: () => {
+        const counter = Math.round(loaderTimeline.progress() * 100);
+        countPercent(counter);
+      },
+      onComplete: () => {
+        loaderTimeline.to(loaderRef.current, {
+          duration: 0.8,
+          yPercent:-100,
+          display:"none"
+        })
+      }
+     });
+
+    const countPercent = (counter:any) => {
+      const count = document.querySelector(".count");
+      if (count) {
+        const fotmateCount = counter < 10 ? `00${counter}`: counter < 100 ? `0${counter}` : counter;
+        count.textContent =fotmateCount;
+      }
+    };
+
     return () => {
       loaderTimeline.kill();
     };
@@ -41,6 +43,7 @@ const Loader = () => {
           <div className="progressLoaderr">
             <div className="progresss"></div>
           </div>
+          <div className="count">000</div>
         </section>
     </>
   );
