@@ -11,7 +11,7 @@ const Loader = () => {
   const loaderRef = useRef(null);
   useEffect(() => {
     const loaderTimeline = gsap.timeline();
-    loaderTimeline.to('.progresss', { duration: 5, width: 500,  ease: "Power4.Out",
+    loaderTimeline.to('.progresss', { duration: 5, width: "100%",  ease: "Power4.Out",
       onUpdate: () => {
         const counter = Math.round(loaderTimeline.progress() * 100);
         countPercent(counter);
@@ -21,6 +21,12 @@ const Loader = () => {
           duration: 0.8,
           yPercent:-100,
           display:"none"
+        })
+        loaderTimeline.to(".heroFade", {
+          // rotate: 360,
+          duration: 1.2,
+          y: "-20px",
+          opacity:1
         })
       }
      });
@@ -40,8 +46,10 @@ const Loader = () => {
   return (
     <>
         <section className="loaderrrSection" ref={loaderRef}>
+          <div className="pl-6 pr-6 w-full h-full">
           <div className="progressLoaderr">
             <div className="progresss"></div>
+          </div>
           </div>
           <div className="count">000</div>
         </section>
