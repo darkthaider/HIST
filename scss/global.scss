@@ -149,8 +149,8 @@ html {
 .custom-markerss {
   color: #fff;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,11 +163,35 @@ html {
       background-color: white;
       height: 109px;
       width: 1px;
-      /* rotate: 30deg; */
+      rotate: 30deg; 
       bottom: 18px;
       left: 8px;
+      bottom: -41%;
+      left: 50%;
+     
+      transform: translate(-50%, -50%)
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      background-color: white;
+      height: 39px;
+      width: 1px;
+      rotate: 86deg;
+      bottom: 18px;
+      left: 8px;
+      bottom: 178%;
+      left: 173%;
     }
   }
+  // svg{
+  //   height: 32px;
+  //   width: 32px;
+  // }
+}
+.heroFade{
+  transform: translateY(100px);
+  opacity: 0;
 }
 
 .tooltipss {
@@ -175,8 +199,8 @@ html {
   width: 100px;
   white-space: nowrap;
   position: absolute;
-  bottom: 120px;
-  left: 0;
+  bottom: 103px;
+  left: 115px;
 }
 
 .locationText {
@@ -191,15 +215,15 @@ html {
     transform: unset;
   }
 }
-.loader {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #000;
-  box-shadow: 16px 0 #000, -16px 0 #000;
-  position: relative;
-  animation: flash 2s ease-out infinite alternate;
-}
+// .loader {
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 50%;
+//   background-color: #000;
+//   box-shadow: 16px 0 #000, -16px 0 #000;
+//   position: relative;
+//   animation: flash 2s ease-out infinite alternate;
+// }
 
 @keyframes flash {
   0% {
@@ -214,4 +238,42 @@ html {
     background-color: rgb(22 22 22 / 60%);
     box-shadow: 16px 0 rgb(22 22 22 / 60%), -16px 0 rgb(22 22 22 / 60%);
   }
+}
+
+.loaderrrSection{
+  position: fixed;
+  background-color: #000;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+
+
+
+.progressLoaderr {
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 100%;
+  background: rgba(236, 236, 238, 0.253);
+  height: 40px;
+  border-radius: 7px;
+}
+
+.progresss {
+  width: 0px;
+  height: 40px;
+  border-radius: 7px;
+  background-color: #fe490c;
+  transition: 0.5s;
+}
+
+.count{
+  position: absolute;
+    bottom: 0;
+    left: 32px;
+    font-size: 120px;
 }

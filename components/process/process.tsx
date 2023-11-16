@@ -99,7 +99,7 @@ const Process = () => {
             <svg
               stroke="currentColor"
               fill="#FE490C"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 256 512"
               color="#399af4"
               height="20px"
@@ -117,7 +117,7 @@ const Process = () => {
             <svg
               stroke="currentColor"
               fill="#FE490C"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 256 512"
               color="#399af4"
               height="20px"

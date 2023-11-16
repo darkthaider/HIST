@@ -18,10 +18,10 @@ const Hero: FC<heroProps> = ({}) => {
         style={{ paddingBottom: "0" }}
       >
         <div
-          data-aos-once={true}
-          data-aos="fade-up"
-          data-aos-duration={1000}
-          className="mdMax:flex mdMax:justify-end md:absolute md:translate-y-[-100px] md:right-[-80px] lg:translate-y-0 lg:right-0 md:max-w-[50%] xl:max-w-[100%]"
+          // data-aos-once={true}
+          // data-aos="fade-up"
+          // data-aos-duration={1000}
+          className="mdMax:flex mdMax:justify-end md:absolute md:translate-y-[-100px] md:right-[-80px] lg:translate-y-0 lg:right-0 md:max-w-[50%] xl:max-w-[100%] heroFade"
         >
           <svg
             className="hidden md:block"
@@ -53,19 +53,19 @@ const Hero: FC<heroProps> = ({}) => {
         <div className="hist-inner-container">
           <div className="mdMax:text-center">
             <h1
-              data-aos-once={true}
-              data-aos="fade-up"
-              data-aos-duration={1000}
-              className="text-hist_white-900 hero-title-56-128 mdMax:mt-[48px] mb-4 xl:mt-[70px]"
+              // data-aos-once={true}
+              // data-aos="fade-up"
+              // data-aos-duration={1000}
+              className="text-hist_white-900 hero-title-56-128 mdMax:mt-[48px] mb-4 xl:mt-[70px] heroFade"
             >
               Modern <br /> Strategists of <br /> Distribution
             </h1>
             <p
-              data-aos-once={true}
-              data-aos="fade-up"
-              data-aos-duration={1000}
-              data-aos-delay="200"
-              className="hero-desc-18-32 text-hist_white-800"
+              // data-aos-once={true}
+              // data-aos="fade-up"
+              // data-aos-duration={1000}
+              // data-aos-delay="200"
+              className="hero-desc-18-32 text-hist_white-800 heroFade"
             >
               Hist® partnering with innovative companies to{" "}
               <br className="mdMax:hidden" /> expand and enter new markets.
