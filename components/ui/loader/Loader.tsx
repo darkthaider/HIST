@@ -2,8 +2,9 @@
 "use client";
 
 import styles from "./loader.module.scss";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
+
 
 
 
