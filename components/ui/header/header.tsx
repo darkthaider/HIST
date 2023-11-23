@@ -37,8 +37,6 @@ const Header: FC<headerProps> = ({}) => {
 
   const handleNavToggle = () => {
     setIsNavOpen(!isNavOpen);
-    const bodyElem: any = document.querySelector("body");
-    bodyElem.style.overflow = isNavOpen ? "auto" : "hidden";
   };
 
   useEffect(() => {
@@ -130,6 +128,7 @@ const Header: FC<headerProps> = ({}) => {
               >
               <Link
                 // prefetch={true}
+              key={item.link}
                 href={item.link}
                 className={`mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-hist_white-900 duration-300 md:pt-1 underline-offset-2 ${
                   pathname === item.link
@@ -139,8 +138,7 @@ const Header: FC<headerProps> = ({}) => {
               >
                 {item.title}
               </Link>
-
-              </div>
+               </div>
             ))}
             <button
               onClick={handleFormToggle}
