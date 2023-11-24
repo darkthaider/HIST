@@ -58,8 +58,8 @@ function GlobeComponent() {
 
 
 
-  const ResCallBack = useCallback(() => 3, [])
-  const MarginCallBack = useCallback(() => 0.6, [])
+  // const ResCallBack = useCallback(() => 3, [])
+  const MarginCallBack = useCallback(() => 0.7, [])
   const ColorCallBack = useCallback(() => "#FE490C", [])
 
   return (
@@ -125,8 +125,8 @@ function GlobeComponent() {
               backgroundColor="#161616"
               // markerData={myCordinates}
               hexPolygonsData={countries.features}
-              hexPolygonResolution={ResCallBack}
-              // hexPolygonUseDots={true}
+              // hexPolygonResolution={ResCallBack}
+              hexPolygonUseDots={true}
               hexPolygonMargin={MarginCallBack}
               hexPolygonColor={ColorCallBack}
               showAtmosphere={false}

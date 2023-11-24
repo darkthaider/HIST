@@ -4,7 +4,7 @@ const Industries = () => {
   return (
     <section
       id="industries"
-      className="h-screen hist-outer-container vertical-padding-48-82"
+      className="hist-outer-container vertical-padding-48-82"
     >
       <div className="hist-inner-container">
         <div
