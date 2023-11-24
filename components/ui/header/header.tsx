@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import ContactUsForm from "../contactUsForm/contactUsForm";
 
@@ -34,13 +34,21 @@ const Header: FC<headerProps> = ({}) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isStickyNav, setIsStickyNav] = useState(false);
   const [isContactForm, setIsContactForm] = useState(false);
-
+  const prevScrollY = useRef(800);
   const handleNavToggle = () => {
-    // document.body.style.overflow = !isNavOpen ? "hidden" : "auto"
+    document.body.style.overflow = isNavOpen ? "auto" : "hidden"
     setIsNavOpen(!isNavOpen);
+    console.log(isNavOpen)
   };
 
+  const navLinkHandler = () => {
+    setIsNavOpen(false);
+      document.body.style.overflow = "auto"
+  }
+  
+
   useEffect(() => {
+    console.log(isNavOpen, "from useEffect")
     document.addEventListener("scroll", handleHeader);
     handleHeader();
     return () => {
@@ -48,13 +56,19 @@ const Header: FC<headerProps> = ({}) => {
     };
   }, []);
 
+
   const handleHeader = () => {
-    const st = document.documentElement.scrollTop;
-    if (st > window.innerHeight) {
-      setIsStickyNav(true);
-    } else {
+    const currentScrollY = window.scrollY  ;
+    if (currentScrollY === 0 || currentScrollY > prevScrollY.current ) {
       setIsStickyNav(false);
+    } else {
+      setIsStickyNav(true);
     }
+
+    console.log(currentScrollY, "currentScrollY")
+    console.log(prevScrollY.current, "prevScrollY.current")
+
+    prevScrollY.current = currentScrollY;
   };
 
   const handleFormToggle = () => {
@@ -121,12 +135,12 @@ const Header: FC<headerProps> = ({}) => {
             </svg>
           </Link>
 
-          <nav className="mdMax:absolute mdMax:h-screen mdMax:left-0 mdMax:pt-[100px] mdMax:top-0 mdMax:flex mdMax:flex-col mdMax:w-[100%] mdMax:gap-[48px] mdMax:z-[-1] md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center mdMax:overflow-auto">
+          <nav className="mdMax:absolute mdMax:h-screen mdMax:left-0 mdMax:pt-[100px] mdMax:top-0 mdMax:flex mdMax:flex-col mdMax:w-[100%] mdMax:gap-[24px] mdMax:z-[-1] md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center mdMax:overflow-auto justify-center">
             {navLinks.map((item) => (
-            // <div 
-            // onClick={handleNavToggle}
-            // key={item.link}
-            // >
+            <div 
+            onClick={navLinkHandler}
+            key={item.link}
+            >
               <Link
                 // prefetch={true}
               key={item.link}
@@ -139,7 +153,7 @@ const Header: FC<headerProps> = ({}) => {
               >
                 {item.title}
               </Link>
-            // </div>
+            </div>
             ))}
             <button
               onClick={handleFormToggle}

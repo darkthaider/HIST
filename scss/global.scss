@@ -208,7 +208,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9;
-  top: clamp(7.5rem, 0.4521rem + 21.2766vw, 13.75rem);
+  top: clamp(7.5rem, 0.4521rem + 21.2766vw, 16.75rem);
   width: 100%;
   @media only screen and (max-width: 520px) {
     position: unset;
@@ -277,3 +277,4 @@ html {
     left: 32px;
     font-size: 120px;
 }
+

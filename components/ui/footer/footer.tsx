@@ -76,7 +76,7 @@ const Footer: FC<footerProps> = ({}) => {
             </h2>
             <button
               onClick={handleFormToggle}
-              className="bg-startBtn p-[2px] inline-block rounded-full"
+              className="bg-startBtn p-[2px] inline-block rounded-full animatedBtn"
               data-aos-once={true}
               data-aos="fade-up"
               data-aos-duration={1000}

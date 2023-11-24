@@ -14,7 +14,7 @@ const Circles = () => {
   }, []);
 
   return (
-    <section className={`${styles.circleWraper} md:left-[35%]`}>
+    <section className={`${styles.circleWraper} md:left-[35%] `}>
       <div className={`${styles.circleParticleWrap} mdMax:left-[72px]`}>
         <Particles
           id="tsparticles2"
