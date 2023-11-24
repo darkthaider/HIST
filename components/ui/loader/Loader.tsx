@@ -1,16 +1,13 @@
 
 "use client";
 
-import styles from "./loader.module.scss";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
-
-
-
+import { useEffect, useRef } from "react";
 
 const Loader = () => {
   const loaderRef = useRef(null);
   useEffect(() => {
+    document.body.style.overflow ="hidden";
     const loaderTimeline = gsap.timeline();
     loaderTimeline.to('.progresss', { duration: 5, width: "100%",  ease: "Power4.Out",
       onUpdate: () => {
@@ -29,6 +26,7 @@ const Loader = () => {
           y: "-20px",
           opacity:1
         })
+    document.body.style.overflow ="auto";
       }
      });
 

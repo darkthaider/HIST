@@ -1,17 +1,27 @@
 "use client";
 import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import ContactUsForm from "../contactUsForm/contactUsForm";
 
 interface footerProps {}
 
 const Footer: FC<footerProps> = ({}) => {
+  // const UpRef = useRef<HTMLBodyElement>(null);
   const [isContactForm, setIsContactForm] = useState(false);
   const handleFormToggle = () => {
     setIsContactForm(!isContactForm);
     const bodyElem: any = document.querySelector("body");
     bodyElem.style.overflow = isContactForm ? "auto" : "hidden";
   };
+
+    const scrollToTop = () => {
+      const bodyElement = document.documentElement;
+      bodyElement.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
   return (
     <>
       <footer className="vertical-padding-48-82 hist-outer-container overflow-hidden relative">
@@ -88,7 +98,7 @@ const Footer: FC<footerProps> = ({}) => {
           <span className="text-[14px] md:text-[16px] text-hist_white-500">
             Ⓒ 2023 HIST®. All rights reserved.
           </span>
-          <span className="text-hist_black rounded-full bg-hist_white-900 w-[72px] h-[72px] xl:w-[100px] xl:h-[100px] text-base xl:text-2xl inline-flex justify-center items-center">
+          <span className="text-hist_black rounded-full bg-hist_white-900 w-[72px] h-[72px] xl:w-[100px] xl:h-[100px] text-base xl:text-2xl inline-flex justify-center items-center cursor-pointer" onClick={scrollToTop}>
             Up
           </span>
         </div>

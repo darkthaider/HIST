@@ -36,6 +36,7 @@ const Header: FC<headerProps> = ({}) => {
   const [isContactForm, setIsContactForm] = useState(false);
 
   const handleNavToggle = () => {
+    // document.body.style.overflow = !isNavOpen ? "hidden" : "auto"
     setIsNavOpen(!isNavOpen);
   };
 
@@ -122,10 +123,10 @@ const Header: FC<headerProps> = ({}) => {
 
           <nav className="mdMax:absolute mdMax:h-screen mdMax:left-0 mdMax:pt-[100px] mdMax:top-0 mdMax:flex mdMax:flex-col mdMax:w-[100%] mdMax:gap-[48px] mdMax:z-[-1] md:flex md:gap-4 lg:gap-6 xl:gap-10 items-center mdMax:overflow-auto">
             {navLinks.map((item) => (
-              <div 
-              key={item.link}
-              onClick={handleNavToggle}
-              >
+            // <div 
+            // onClick={handleNavToggle}
+            // key={item.link}
+            // >
               <Link
                 // prefetch={true}
               key={item.link}
@@ -138,7 +139,7 @@ const Header: FC<headerProps> = ({}) => {
               >
                 {item.title}
               </Link>
-               </div>
+            // </div>
             ))}
             <button
               onClick={handleFormToggle}
