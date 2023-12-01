@@ -155,11 +155,20 @@ const Header: FC<headerProps> = ({}) => {
               </Link>
             </div>
             ))}
-            <button
+            {/* <button
               onClick={handleFormToggle}
               className="mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 md:inline-flex font-normal md:ml-4 xl:ml-8 md:bg-hist_white-900 md:text-lg xl:text-2xl md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 md:pb-1 md:pt-2 xl:pt-3 md:rounded-full md:leading-[26px] text-hist_black"
             >
               Contact us
+            </button> */}
+            <button
+              onClick={handleFormToggle}
+              className="animatedBtn contact"
+            >
+              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px]">
+
+              Contact us
+              </span>
             </button>
           </nav>
           <div className="flex gap-4 md:hidden items-center">
@@ -210,12 +219,15 @@ const Header: FC<headerProps> = ({}) => {
               {item.title}
             </Link>
           ))}
-          <button
-            onClick={handleFormToggle}
-            className="font-normal md:ml-4 xl:ml-8 md:bg-hist_white-900 md:text-lg xl:text-2xl md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 md:pb-1 md:pt-2 xl:pt-3 md:rounded-full md:leading-[26px] whitespace-nowrap text-hist_black"
-          >
-            Contact us
-          </button>
+             <button
+              onClick={handleFormToggle}
+              className="animatedBtn contact"
+            >
+              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px]">
+
+              Contact us
+              </span>
+            </button>
         </nav>
       </div>
       {isContactForm && <ContactUsForm handleFormToggle={handleFormToggle} />}
