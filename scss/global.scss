@@ -278,3 +278,58 @@ html {
     font-size: 120px;
 }
 
+
+.animatedBtn{
+    --border-size: 3px;
+    --border-angle: 0turn;
+    width: 180px;
+    height: 64px;
+    border-radius: 100px;
+    background-image: transparent;
+    background-size: calc(100% - var(--border-size) * 15) calc(100% - var(--border-size) * 8), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-animation:  bg-spin 3s linear infinite paused;
+    animation: bg-spin 3s linear infinite paused;
+    span{
+      background: #fff;
+      height: 93%;
+      display: block;
+      width: 95%;
+      border-radius: 100px;
+      margin: 0 auto;
+      color: black;
+      line-height: 2;
+    }
+    &.contact{
+      span{
+        font-size: 1.5rem;
+      line-height: 2.8;
+
+      }
+    }
+}
+
+@-webkit-keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.animatedBtn:hover {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #fe490c, #fe490c);
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}

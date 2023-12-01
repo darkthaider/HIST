@@ -76,14 +76,15 @@ const Footer: FC<footerProps> = ({}) => {
             </h2>
             <button
               onClick={handleFormToggle}
-              className="bg-startBtn p-[2px] inline-block rounded-full animatedBtn"
+              className="animatedBtn"
               data-aos-once={true}
               data-aos="fade-up"
               data-aos-duration={1000}
               data-aos-delay="300"
             >
-              <span className="text-[20px] text-hist_black inline-block md:inline-flex font-normal bg-hist_white-900 md:text-[32px] px-[48px] md:pb-1 pt-2 md:pt-3 rounded-full">
-                START
+              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px]">
+
+              start
               </span>
             </button>
           </div>
