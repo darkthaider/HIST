@@ -82,7 +82,7 @@ const Footer: FC<footerProps> = ({}) => {
               data-aos-duration={1000}
               data-aos-delay="300"
             >
-              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px]">
+              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px] leading-[3.2] md:leading-[2.12]">
 
               start
               </span>
