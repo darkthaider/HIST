@@ -76,13 +76,13 @@ const Footer: FC<footerProps> = ({}) => {
             </h2>
             <button
               onClick={handleFormToggle}
-              className="animatedBtn"
+              className="animatedBtn btnStrt"
               data-aos-once={true}
               data-aos="fade-up"
               data-aos-duration={1000}
               data-aos-delay="300"
             >
-              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px] leading-[2.6] md:leading-[1.8]">
+              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px] leading-[3.2] md:leading-[2.2] ftr-span">
 
               start
               </span>

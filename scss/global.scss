@@ -300,6 +300,9 @@ html {
       margin: 0 auto;
       color: black;
       // line-height: 2;
+      &.ftr-span{
+        height: 60px !important;
+      }
     }
     &.contact{
       span{
@@ -308,6 +311,10 @@ html {
 
       }
     }
+    &.btnStrt{
+    height: 66px;
+    }
+  
 }
 
 @-webkit-keyframes bg-spin {
