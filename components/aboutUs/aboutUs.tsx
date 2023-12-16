@@ -30,7 +30,7 @@ const faqInitialData = [
     linkedin:"https://www.linkedin.com/in/ahmad-abdulwahab-9a696742/",
   },
   {
-    id: 1,
+    id: 3,
     title: "Mohamed Abdelwahab",
     desc: "Mohamed Abdelwahab, with a background in genetics, cellular and molecular biology, medical research and a degree from Boston University, is a valuable asset to our team. His experience in the medical field spans various roles, showcasing his versatility and commitment. Mohamed is particularly interested in the productive applications of biotechnology and envisions a future where advancements in this field benefit communities worldwide.",
     isOpen: false,
@@ -101,7 +101,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
                     height={100}
                     alt={item.title}
                     loading="lazy"
-                    className="rounded-full h-[100px] grayscale"
+                    className="rounded-full h-[100px] grayscale object-cover object-top"
                   />
                 </div>
                 <div className="flex grow justify-between items-start md:items-center">
