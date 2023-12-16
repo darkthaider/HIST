@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import React, { FC, useState } from "react";
-import ahmad from "@/public/ahmed.png";
+import ahmad from "@/public/ahmed.jpeg";
 import talha from "@/public/talha.png";
-import mohammad from "@/public/mohammad.png";
+import mohammad from "@/public/wahab.jpeg";
 import Image from "next/image";
 import TextAnimation from "../ui/textAnimation/textAnimation";
 
@@ -11,27 +11,34 @@ interface aboutUsProps {}
 const faqInitialData = [
   {
     id: 1,
-    title: "Ahmed Abdelwahab",
-    desc: "Experienced General Manager with a demonstrated history of working in the hospital & health care industry. Skilled in Negotiation, Business Planning, Medical Devices, Sales, and Oncology. Strong healthcare services professional with a Doctor of Philosophy - PhD focused in Biochemistry from Ain Shams University.",
+    title: "Talha Haider",
+    desc: "Talha Haider, the Co-founder of Nod Financial, is a seasoned professional with a diverse skill set encompassing sales, business development, and human resources. Holding a background in Computer Engineering from Boston University and a fintech specialization from UC Berkeley School of Haas, Talha is well-versed in both technology and finance. With a passion for strategy and business growth, he has played a pivotal role in mentoring numerous startups, refining their vision, and enhancing their brand. Talha's creative and adaptive mentality consistently brings out the best in all his partnerships.",
     isOpen: false,
     designation: "Co-Founder, President",
     avatar: ahmad.src,
+    linkedin:"https://www.linkedin.com/in/talha-haider-k/",
+    twiter:"https://x.com/talha_h_k?s=20"
   },
   {
     id: 2,
-    title: "Talha Kamran ",
-    desc: "I am consistently impressed with the level of professionalism and expertise they bring to the table. Their products are always top quality, and their customer service is unparalleled. I appreciate their dedication to medical research and their commitment to ensuring that patients receive the best possible care. They have made a tangible difference in my work, and I would highly recommend them to anyone in the medical industry.",
+    title: "Mohamed Abdelwahab",
+    desc: "Mohamed Abdelwahab, with a background in genetics, cellular and molecular biology, medical research and a degree from Boston University, is a valuable asset to our team. His experience in the medical field spans various roles, showcasing his versatility and commitment. Mohamed is particularly interested in the productive applications of biotechnology and envisions a future where advancements in this field benefit communities worldwide.",
     isOpen: false,
     designation: "Board Member",
     avatar: talha.src,
+    twiter:"https://x.com/",
+    linkedin:"https://www.linkedin.com",
+
   },
   {
     id: 3,
-    title: "Mohammed Abdelwahab",
-    desc: "Experienced General Manager with a demonstrated history of working in the hospital & health care industry. Skilled in Negotiation, Business Planning, Medical Devices, Sales, and Oncology. Strong healthcare services professional with a Doctor of Philosophy - PhD focused in Biochemistry from Ain Shams University.",
+    title: "Ahmed Abdelwahab",
+    desc: "With over 34 years of experience in medical and pharmaceutical distribution, Dr. Ahmed Abdelwahab stands as a stalwart in the industry. Having played a pivotal role in propelling Becton Dickinson to its full potential in Kuwait reflecting to the Middle East and Gulf regions, he is known for dominating markets and expanding revenues. Ahmed has forged enduring partnerships, contributing to the growth of companies across Egypt, Kuwait, UAE, and beyond. As an Industry Veteran in the field he has a natural intuition for problem solving as he’s dealt with a myriad of obstacles. Extending his impactful career, he is also an investor in multiple ventures, reflecting his commitment to fostering innovation and success.",
     isOpen: false,
     designation: "Co-Founder",
     avatar: mohammad.src,
+    twiter:"https://x.com",
+    linkedin:"https://www.linkedin.com/in/ahmad-abdulwahab-9a696742/",
   },
 ];
 
@@ -93,6 +100,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
                     height={100}
                     alt={item.title}
                     loading="lazy"
+                    className="rounded-full h-[100px] grayscale"
                   />
                 </div>
                 <div className="flex grow justify-between items-start md:items-center">
@@ -101,7 +109,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
                       <h4 className="faq-title-20-32 text-hist_white-900 mr-4">
                         {item.title}
                       </h4>
-                      <Link href="/">
+                      <Link href={item.twiter} target="_blank">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
@@ -117,7 +125,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
                         </svg>
                       </Link>
                       &nbsp;&nbsp;
-                      <Link href="/">
+                      <Link href={item.linkedin} target="_blank">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="14"

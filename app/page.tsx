@@ -22,7 +22,7 @@ export default function Home() {
       <Hero />
       <Experience />
       <Services />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Industries />
       {/* <GlobeComponent /> */}
       <NoSSRWrapper>

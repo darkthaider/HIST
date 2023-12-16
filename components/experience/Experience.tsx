@@ -29,7 +29,7 @@ const Experience = () => {
           data-aos="fade-up"
           data-aos-duration={1000}
           data-aos-delay="300"
-          className={`justify-end lg:flex block mt-[242px]`}
+          className={`justify-end lg:flex block mt-[60px] md:mt-[160px]`}
         >
           <p className="text-hist_white-800 desc-16-20 max-w-[648px]">
             Our services include market research, product positioning and

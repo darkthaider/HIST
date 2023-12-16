@@ -84,7 +84,7 @@ const Header: FC<headerProps> = ({}) => {
           isNavOpen ? "mdMax:h-screen" : ""
         } `}
       >
-        <div className="bg-hist_black md:bg-hist_white-100 pl-4 pr-4 lg:pl-6 lg:pr-6 xl:pl-8 xl:pr-8 pt-4 pb-4 flex justify-between items-center rounded-lg">
+        <div className="bg-hist_black md:bg-hist_white-100 pl-4 pr-4 lg:pl-6 lg:pr-6 xl:pl-8 xl:pr-8 py-[13px] flex justify-between items-center rounded-lg">
           <Link
             href="/"
             className="max-w-[100px] md:max-w-[120px] xl:max-w-none"
@@ -95,6 +95,7 @@ const Header: FC<headerProps> = ({}) => {
               height="56"
               viewBox="0 0 173 56"
               fill="none"
+              className="w-[140px] h-[48px]"
             >
               <path
                 d="M165.425 17.199C163.143 17.199 161.378 16.5363 160.131 15.211C158.883 13.8702 158.259 11.9823 158.259 9.5473V7.65171C158.259 5.20131 158.883 3.31343 160.131 1.98806C161.378 0.662686 163.143 0 165.425 0C167.722 0 169.487 0.662686 170.72 1.98806C171.968 3.31343 172.592 5.20131 172.592 7.65171V9.5473C172.592 11.9823 171.968 13.8702 170.72 15.211C169.487 16.5363 167.722 17.199 165.425 17.199ZM165.425 15.9276C167.339 15.9276 168.792 15.3959 169.785 14.3325C170.777 13.2691 171.273 11.6895 171.273 9.59354V7.58236C171.273 5.50183 170.777 3.92988 169.785 2.8665C168.792 1.80312 167.339 1.27143 165.425 1.27143C163.512 1.27143 162.059 1.80312 161.066 2.8665C160.074 3.92988 159.578 5.50183 159.578 7.58236V9.59354C159.578 11.6895 160.074 13.2691 161.066 14.3325C162.059 15.3959 163.512 15.9276 165.425 15.9276ZM168.722 12.9224H167.446L167.19 11.3042C167.091 10.6261 166.921 10.1638 166.68 9.91717C166.439 9.67059 166.063 9.5473 165.553 9.5473H163.597V8.46081H165.872C166.382 8.46081 166.751 8.32981 166.978 8.06782C167.205 7.79041 167.318 7.41284 167.318 6.93509V6.6808C167.318 6.23387 167.205 5.87171 166.978 5.5943C166.765 5.3169 166.397 5.1782 165.872 5.1782H163.575V4.06858H166C166.879 4.06858 167.524 4.27664 167.935 4.69274C168.36 5.09344 168.573 5.70218 168.573 6.51898V6.75015C168.573 7.32037 168.424 7.79812 168.126 8.1834C167.843 8.55327 167.375 8.76903 166.723 8.83068L166.68 8.9925L166.425 8.78444C167.105 8.84609 167.573 9.06955 167.828 9.45483C168.098 9.82471 168.296 10.3872 168.424 11.1424L168.722 12.9224ZM164.001 12.9224H162.767V4.06858H164.001V12.9224Z"
@@ -145,7 +146,7 @@ const Header: FC<headerProps> = ({}) => {
                 // prefetch={true}
               key={item.link}
                 href={item.link}
-                className={`mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-hist_white-900 duration-300 md:pt-1 underline-offset-2 ${
+                className={`mdMax:text-[40px] mdMax:leading-[48px] mdMax:text-hist_white-900 text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-[#fe490c] duration-300 md:pt-1 underline-offset-2  ${
                   pathname === item.link
                     ? "underline decoration-1 text-hist_white-900"
                     : ""
@@ -210,7 +211,7 @@ const Header: FC<headerProps> = ({}) => {
             <Link
               key={item.link}
               href={item.link}
-              className={`text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-hist_white-900 duration-300 md:pt-1 underline-offset-2 whitespace-nowrap ${
+              className={`text-hist_white-800 text-lg xl:text-2xl leading-[26px] font-normal transition-colors hover:underline hover:decoration-1 hover:text-[#fe490c] duration-300 md:pt-1 underline-offset-2 whitespace-nowrap ${
                 pathname === item.link
                   ? "underline decoration-1 text-hist_white-900"
                   : ""

@@ -64,10 +64,12 @@ const Services = () => {
   }, []);
   return (
     <section
-      ref={servicesRef}
       id="services"
-      className="vertical-padding-48-82 hist-outer-container "
+      className="vertical-padding-48-82 hist-outer-container overflow-x-hidden"
     >
+      <div
+      ref={servicesRef}
+      >
       <div className="hist-inner-container sm:text-center text-left">
         <div
           data-aos-once={true}
@@ -150,6 +152,8 @@ const Services = () => {
             </div>
           ))}
         </div>
+      </div>
+
       </div>
     </section>
   );

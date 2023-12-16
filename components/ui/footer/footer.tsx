@@ -33,7 +33,7 @@ const Footer: FC<footerProps> = ({}) => {
               data-aos="fade-up"
               data-aos-duration={1000}
             >
-              <Link href="/">
+              <Link href="https://x.com/" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -49,7 +49,7 @@ const Footer: FC<footerProps> = ({}) => {
                 </svg>
               </Link>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <Link href="/">
+              <Link href="https://www.linkedin.com/company/histgroup/about/" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -82,7 +82,7 @@ const Footer: FC<footerProps> = ({}) => {
               data-aos-duration={1000}
               data-aos-delay="300"
             >
-              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px] leading-[3.2] md:leading-[2.12]">
+              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px] leading-[2.6] md:leading-[1.8]">
 
               start
               </span>
@@ -99,7 +99,7 @@ const Footer: FC<footerProps> = ({}) => {
           <span className="text-[14px] md:text-[16px] text-hist_white-500">
             Ⓒ 2023 HIST®. All rights reserved.
           </span>
-          <span className="text-hist_black rounded-full bg-hist_white-900 w-[72px] h-[72px] xl:w-[100px] xl:h-[100px] text-base xl:text-2xl inline-flex justify-center items-center cursor-pointer" onClick={scrollToTop}>
+          <span className="text-hist_black rounded-full bg-hist_white-900 w-[72px] h-[72px] xl:w-[100px] xl:h-[100px] text-base xl:text-2xl inline-flex justify-center items-center cursor-pointer font-bold" onClick={scrollToTop}>
             Up
           </span>
         </div>
