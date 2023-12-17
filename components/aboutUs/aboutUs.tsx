@@ -11,30 +11,31 @@ interface aboutUsProps {}
 const faqInitialData = [
   {
     id: 1,
-    title: "Talha Haider",
-    desc: "Talha Haider, the Co-founder of Nod Financial, is a seasoned professional with a diverse skill set encompassing sales, business development, and human resources. Holding a background in Computer Engineering from Boston University and a fintech specialization from UC Berkeley School of Haas, Talha is well-versed in both technology and finance. With a passion for strategy and business growth, he has played a pivotal role in mentoring numerous startups, refining their vision, and enhancing their brand. Talha's creative and adaptive mentality consistently brings out the best in all his partnerships.",
-    isOpen: false,
-    designation: "Co-Founder, President",
-    avatar: talha.src,
-    linkedin:"https://www.linkedin.com/in/talha-haider-k/",
-    twiter:"https://x.com/talha_h_k?s=20"
-  },
-  {
-    id: 2,
     title: "Ahmed Abdelwahab",
     desc: "With over 34 years of experience in medical and pharmaceutical distribution, Dr. Ahmed Abdelwahab stands as a stalwart in the industry. Having played a pivotal role in propelling Becton Dickinson to its full potential in Kuwait reflecting to the Middle East and Gulf regions, he is known for dominating markets and expanding revenues. Ahmed has forged enduring partnerships, contributing to the growth of companies across Egypt, Kuwait, UAE, and beyond. As an Industry Veteran in the field he has a natural intuition for problem solving as he’s dealt with a myriad of obstacles. Extending his impactful career, he is also an investor in multiple ventures, reflecting his commitment to fostering innovation and success.",
     isOpen: false,
-    designation: "Co-Founder",
+    designation: "Co-Founder & President",
     avatar: ahmad.src,
     twiter:"https://x.com",
     linkedin:"https://www.linkedin.com/in/ahmad-abdulwahab-9a696742/",
   },
   {
+    id: 2,
+    title: "Talha Haider",
+    desc: "Talha Haider, the Co-founder of Nod Financial, is a seasoned professional with a diverse skill set encompassing sales, business development, and human resources. Holding a background in Computer Engineering from Boston University and a fintech specialization from UC Berkeley School of Haas, Talha is well-versed in both technology and finance. With a passion for strategy and business growth, he has played a pivotal role in mentoring numerous startups, refining their vision, and enhancing their brand. Talha's creative and adaptive mentality consistently brings out the best in all his partnerships.",
+    isOpen: false,
+    designation: "Co-Founder & COO",
+    avatar: talha.src,
+    linkedin:"https://www.linkedin.com/in/talha-haider-k/",
+    twiter:"https://x.com/talha_h_k?s=20"
+  },
+
+  {
     id: 3,
     title: "Mohamed Abdelwahab",
     desc: "Mohamed Abdelwahab, with a background in genetics, cellular and molecular biology, medical research and a degree from Boston University, is a valuable asset to our team. His experience in the medical field spans various roles, showcasing his versatility and commitment. Mohamed is particularly interested in the productive applications of biotechnology and envisions a future where advancements in this field benefit communities worldwide.",
     isOpen: false,
-    designation: "Board Member",
+    designation: "Co-Founder, Lead Scientist",
     avatar: mohammad.src,
     twiter:"https://x.com/",
     linkedin:"https://www.linkedin.com",
