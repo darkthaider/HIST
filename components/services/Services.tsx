@@ -30,7 +30,7 @@ const Services = () => {
   const servicesRef = useRef(null);
 
   useLayoutEffect(() => {
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1200) {
       const servicesTimeline = gsap
         .timeline()
         .to(".flag-1,.flag-line-1", {
@@ -102,14 +102,14 @@ const Services = () => {
           you and plant your {"company's"} flag in new markets!
         </p>
         <div
-          className={`${styles.allServices} md:grid grid-cols-2 gap-4 lg:hidden mt-[56px]`}
+          className={`${styles.allServices} md:grid grid-cols-2 gap-4 xl:hidden mt-[56px]`}
         >
           {services.map((data, index) => (
             <div
-              data-aos-once={true}
-              data-aos="fade-up"
-              data-aos-duration={1000}
-              data-aos-delay={index * 100 + 300}
+              // data-aos-once={true}
+              // data-aos="fade-up"
+              // data-aos-duration={1000}
+              // data-aos-delay={index * 100 + 500}
               key={data.number}
               className="mt-[28px]"
             >
@@ -123,7 +123,7 @@ const Services = () => {
             </div>
           ))}
         </div>
-        <div className="flex border-b border-b-hist_white-500 services min-h-[270px] mt-[204px] lgMax:hidden items-end">
+        <div className="flex border-b border-b-hist_white-500 services min-h-[270px] mt-[204px] xl:flex items-end hidden">
           {services.map((service) => (
             <div
               key={service.number}
@@ -153,7 +153,6 @@ const Services = () => {
           ))}
         </div>
       </div>
-
       </div>
     </section>
   );

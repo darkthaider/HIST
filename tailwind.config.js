@@ -10,6 +10,7 @@ module.exports = {
       screens: {
         mdMax: { max: "767px" },
         lgMax: { max: "1023px" },
+        'xl': '1200px',
         container: { max: "1320px" },
         minContainer: { min: "1321px" },
         minOuterContainer: { min: "1728px" },
