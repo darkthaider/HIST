@@ -102,14 +102,14 @@ const Services = () => {
           you and plant your {"company's"} flag in new markets!
         </p>
         <div
-          className={`${styles.allServices} md:grid grid-cols-2 gap-4 xl:hidden mt-[56px]`}
+          className={`${styles.allServices} md:grid grid-cols-2 gap-4 xl:hidden mt-[56px] overflow-y-hidden`}
         >
           {services.map((data, index) => (
             <div
-              // data-aos-once={true}
-              // data-aos="fade-up"
-              // data-aos-duration={1000}
-              // data-aos-delay={index * 100 + 500}
+              data-aos-once={true}
+              data-aos="fade-up"
+              data-aos-duration={1000}
+              data-aos-delay={300}
               key={data.number}
               className="mt-[28px]"
             >
