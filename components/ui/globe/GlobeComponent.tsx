@@ -24,12 +24,15 @@ function GlobeComponent() {
   </svg>`;
 
   const myCordinates = [
-    { lat: 39.0458, lng: -76.641, city: "Maryland" },
-    { lat: 31.9686, lng: -99.9018, city: "Texas" },
-    { lat: 27.994402, lng: -81.760254, city: "Florida" },
-    { lat: 47.7511, lng: -120.7401, city: "Washington" },
-    { lat: 30.3753, lng: 69.3451, city: "Pakistan" },
-    { lat: 20.5937, lng: 78.9629, city: "India" },
+    { lat: 42.3601, lng: 71.0589, city: "Boston, MA, USA" },
+    { lat: 30.0444, lng: 31.2357, city: "Cairo, Egypt" },
+    { lat: 13.0827, lng: 80.2707, city: "Chennai, India " },
+    { lat: 29.3117, lng: 47.4818, city: "Kuwait" },
+    { lat: 31.5204, lng: 74.3587, city: "Lahore, Pakistan " },
+    { lat: 24.7136, lng: 46.6753, city: "Riyadh , Saudi Arabia " },
+    { lat: 25.2854, lng: 51.5310, city: "Doha, Qatar " },
+    { lat: 25.2048, lng: 55.2708, city: "Dubai, UAE " },
+    { lat: 40.7128, lng: 74.0060, city: "New York City, NY, USA " },
   ];
 
   const gData = myCordinates.map((coordinates) => ({
