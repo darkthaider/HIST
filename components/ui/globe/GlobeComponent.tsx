@@ -25,6 +25,7 @@ function GlobeComponent() {
 
   const myCordinates = [
     { lat: 42.3601, lng: 71.0589, city: "Boston, MA, USA" },
+    { lat: 40.7128, lng: 74.0060, city: "New York City, NY, USA " },
     { lat: 30.0444, lng: 31.2357, city: "Cairo, Egypt" },
     { lat: 13.0827, lng: 80.2707, city: "Chennai, India " },
     { lat: 29.3117, lng: 47.4818, city: "Kuwait" },
@@ -32,7 +33,6 @@ function GlobeComponent() {
     { lat: 24.7136, lng: 46.6753, city: "Riyadh , Saudi Arabia " },
     { lat: 25.2854, lng: 51.5310, city: "Doha, Qatar " },
     { lat: 25.2048, lng: 55.2708, city: "Dubai, UAE " },
-    { lat: 40.7128, lng: 74.0060, city: "New York City, NY, USA " },
   ];
 
   const gData = myCordinates.map((coordinates) => ({
