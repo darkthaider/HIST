@@ -13,50 +13,74 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
   const [emailError, setEmailError] = useState(false);
   const [requestStatus, setRequestStatus] = useState("");
 
-  const handleSubmitForm = (e: any) => {
+  // const handleSubmitForm = (e: any) => {
+  //   e.preventDefault();
+
+  //   if (
+  //     email.trim() === "" ||
+  //     email.length === 0 ||
+  //     new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(email) ===
+  //       false
+  //   ) {
+  //     setEmailError(true);
+  //   }
+
+  //   if (!emailError) {
+  //     const data = new FormData();
+  //     data.append("Email", email);
+  //     data.append("Number", number);
+
+  //     setRequestStatus("loading");
+
+  //     fetch(
+  //       "https://script.google.com/macros/s/AKfycbxa6yvon3V54mQscCYGfAerXyUV-xoe2XOTLmAp1L2z2-Znv0ZsyBCBsb6UfHyn5ug_/exec",
+  //       {
+  //         method: "POST",
+  //         body: data,
+  //       }
+  //     )
+  //       .then((res) => {
+  //         if (res.status === 200) {
+  //           console.log(res);
+  //           setRequestStatus("sent");
+  //           setTimeout(() => {
+  //             handleFormToggle();
+  //           }, 1000);
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //         setRequestStatus("error");
+  //         setTimeout(() => {
+  //           handleFormToggle();
+  //         }, 1000);
+  //       });
+  //   }
+  // };
+
+  const handleSubmitForm = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (
-      email.trim() === "" ||
-      email.length === 0 ||
-      new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(email) ===
-        false
-    ) {
-      setEmailError(true);
-    }
+    try {
+      const res = await fetch("/api/notion", {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          phone: number,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-    if (!emailError) {
-      const data = new FormData();
-      data.append("Email", email);
-      data.append("Number", number);
-
-      setRequestStatus("loading");
-
-      fetch(
-        "https://script.google.com/macros/s/AKfycbxa6yvon3V54mQscCYGfAerXyUV-xoe2XOTLmAp1L2z2-Znv0ZsyBCBsb6UfHyn5ug_/exec",
-        {
-          method: "POST",
-          body: data,
-        }
-      )
-        .then((res) => {
-          if (res.status === 200) {
-            console.log(res);
-            setRequestStatus("sent");
-            setTimeout(() => {
-              handleFormToggle();
-            }, 1000);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-          setRequestStatus("error");
-          setTimeout(() => {
-            handleFormToggle();
-          }, 1000);
-        });
+      if (res.ok) {
+        handleFormToggle();
+      }
+    } catch (error) {
+      handleFormToggle();
     }
   };
+
   return (
     <div className="fixed inset-0 z-10">
       <div
