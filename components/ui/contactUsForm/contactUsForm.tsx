@@ -58,8 +58,8 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
   //   }
   // };
 
-  const handleSubmitForm = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmitForm = async () => {
+    setRequestStatus("loading");
 
     try {
       const res = await fetch("/api/notion", {
@@ -74,10 +74,12 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
       });
 
       if (res.ok) {
-        handleFormToggle();
+        setRequestStatus("sent");
+        // handleFormToggle();
       }
     } catch (error) {
-      handleFormToggle();
+      setRequestStatus("error");
+      // handleFormToggle();
     }
   };
 
@@ -102,106 +104,123 @@ const ContactUsForm: FC<contactUsFormProps> = ({ handleFormToggle }) => {
             />
           </svg>
           <h4 className="contact-us-form-title mt-8 mb-3 text-hist_white-900">
-            Contact Us
+            {(requestStatus === "" || requestStatus === "loading") &&
+              "Contact Us"}
+            {requestStatus === "sent" && "Talk to you soon!"}
+            {requestStatus === "error" && "Something went wrong!"}
           </h4>
           <p className="mb-8 contact-us-form-desc text-hist_white-500 max-w-[328px]">
-            Let{"'"}s partner and see how we can help you grow your company.
+            {(requestStatus === "" || requestStatus === "loading") &&
+              `Let's partner and see how we can help you grow your company.`}
+            {requestStatus === "sent" && (
+              <>
+                We will reply back to you in the next 2 days! You can also
+                directly reach out to our sales team at{" "}
+                <a
+                  href="mailto:admin@histgroup.org"
+                  className="underline font-medium text-hist_white-900"
+                >
+                  admin@histgroup.org
+                </a>
+              </>
+            )}
           </p>
         </div>
 
-        <form action="#" onSubmit={handleSubmitForm}>
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-[16px] text-hist_white-600"
-            >
-              Email address
-            </label>
-            <div className="mt-0">
-              <input
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (email.trim() !== "") {
-                    setEmailError(false);
-                  }
-                  if (e.target.value === "") {
-                    setEmailError(true);
-                  }
-                }}
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className={`w-full rounded-[8px] border border-[#343434] bg-hist_black px-[20px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px] ${
-                  emailError
-                    ? "focus:border-hist_red border-hist_red"
-                    : "border-[#343434]"
-                }`}
-              />
-              {emailError && (
-                <small className="text-[#FE490C] text-xs">
-                  Please enter valid Email
-                </small>
-              )}
+        {(requestStatus === "" || requestStatus === "loading") && (
+          <form action="#" onSubmit={handleSubmitForm}>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-[16px] text-hist_white-600"
+              >
+                Email address
+              </label>
+              <div className="mt-0">
+                <input
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (email.trim() !== "") {
+                      setEmailError(false);
+                    }
+                    if (e.target.value === "") {
+                      setEmailError(true);
+                    }
+                  }}
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className={`w-full rounded-[8px] border border-[#343434] bg-hist_black px-[20px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px] ${
+                    emailError
+                      ? "focus:border-hist_red border-hist_red"
+                      : "border-[#343434]"
+                  }`}
+                />
+                {emailError && (
+                  <small className="text-[#FE490C] text-xs">
+                    Please enter valid Email
+                  </small>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="mt-8">
-            <label
-              htmlFor="number"
-              className="block text-[16px] text-hist_white-600"
-            >
-              Phone number
-            </label>
-            <div className="mt-0 relative">
-              {/* <span className="text-hist_white-600 pt-[5px] absolute top-[50%] translate-y-[-50%] left-[20px]">
+            <div className="mt-8">
+              <label
+                htmlFor="number"
+                className="block text-[16px] text-hist_white-600"
+              >
+                Phone number
+              </label>
+              <div className="mt-0 relative">
+                {/* <span className="text-hist_white-600 pt-[5px] absolute top-[50%] translate-y-[-50%] left-[20px]">
                 +1{" "}
                 <span className="h-[24px] pt-[1px] w-[1px] bg-[#343434] inline-block absolute top-[50%] translate-y-[-50%] left-[30px]"></span>
               </span> */}
-              <input
-                value={number}
-                onChange={(e) => setNumber(e.target.value)}
-                id="number"
-                name="number"
-                type="tel"
-                autoComplete="number"
-                required
-                className="w-full rounded-[8px] border border-[#343434] bg-hist_black px-[20px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px]"
-              />
+                <input
+                  value={number}
+                  onChange={(e) => setNumber(e.target.value)}
+                  id="number"
+                  name="number"
+                  type="tel"
+                  autoComplete="number"
+                  required
+                  className="w-full rounded-[8px] border border-[#343434] bg-hist_black px-[20px] pt-[10px] pb-1.5 h-[48px] text-gray-900 outline-none shadow-none placeholder:text-gray-400 focus:border-hist_white-600 focus:shadow-none text-[16px]"
+                />
+              </div>
             </div>
-          </div>
-
+          </form>
+        )}
+        {requestStatus === "" && (
           <div className="mt-12">
-            {requestStatus === "" && (
-              <button
-                type="submit"
-                className={`flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border text-hist_white-900 duration-300 bg-hist_black pt-3 pb-1 hover:bg-hist_red hover:border-hist_red `}
-                disabled={requestStatus !== "" ? true : false}
-              >
-                Submit
-              </button>
-            )}
-            {requestStatus === "loading" && (
-              <button
-                type="button"
-                className={`flex items-center w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 cursor-progress transition-border duration-300 bg-hist_white-900 h-[48px]`}
-                disabled={true}
-              >
-                <span className="loader"></span>
-              </button>
-            )}
-            {requestStatus === "sent" && (
-              <button
-                type="button"
-                className={`flex items-center w-full text-[20px] font-[500] justify-center rounded-[8px] border  transition-border duration-300 border-[#199255] bg-[#199255] text-[#ffffff] h-[48px] `}
-                disabled={true}
-              >
-                Sent
-              </button>
-            )}
+            <button
+              onClick={handleSubmitForm}
+              // type="submit"
+              className={`flex w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 transition-border text-hist_white-900 duration-300 bg-hist_black pt-3 pb-1 hover:bg-hist_red hover:border-hist_red `}
+            >
+              Submit
+            </button>
           </div>
-        </form>
+        )}
+        {requestStatus === "loading" && (
+          <button
+            type="button"
+            className={`mt-12 flex items-center w-full text-[20px] font-[500] justify-center rounded-[8px] border border-hist_white-600 cursor-progress transition-border duration-300 bg-hist_white-900 h-[48px]`}
+            disabled={true}
+          >
+            <span className="loader"></span>
+          </button>
+        )}
+        {requestStatus === "sent" && (
+          <button
+            type="button"
+            className={`flex items-center w-full text-[20px] font-[500] justify-center rounded-[8px] border  transition-border duration-300 border-[#199255] bg-[#199255] text-[#ffffff] h-[48px] `}
+            disabled={true}
+          >
+            Sent
+          </button>
+        )}
       </div>
     </div>
   );
