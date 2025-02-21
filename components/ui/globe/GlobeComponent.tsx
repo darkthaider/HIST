@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Globe from "react-globe.gl";
 import { SizeMe } from "react-sizeme";
 import { countries } from "./countries";
-import { useCallback } from 'react';
+import { useCallback } from "react";
 
 function GlobeComponent() {
   const globeRef = useRef();
@@ -25,13 +25,13 @@ function GlobeComponent() {
 
   const myCordinates = [
     { lat: 42.3601, lng: 71.0589, city: "Boston, MA, USA" },
-    { lat: 40.7128, lng: 74.0060, city: "New York City, NY, USA " },
+    { lat: 40.7128, lng: 74.006, city: "New York City, NY, USA " },
     { lat: 30.0444, lng: 31.2357, city: "Cairo, Egypt" },
     { lat: 13.0827, lng: 80.2707, city: "Chennai, India " },
     { lat: 29.3117, lng: 47.4818, city: "Kuwait" },
     { lat: 31.5204, lng: 74.3587, city: "Lahore, Pakistan " },
     { lat: 24.7136, lng: 46.6753, city: "Riyadh , Saudi Arabia " },
-    { lat: 25.2854, lng: 51.5310, city: "Doha, Qatar " },
+    { lat: 25.2854, lng: 51.531, city: "Doha, Qatar " },
     { lat: 25.2048, lng: 55.2708, city: "Dubai, UAE " },
   ];
 
@@ -59,11 +59,9 @@ function GlobeComponent() {
     return () => clearTimeout(timer);
   }, []);
 
-
-
   // const ResCallBack = useCallback(() => 3, [])
-  const MarginCallBack = useCallback(() => 0.7, [])
-  const ColorCallBack = useCallback(() => "#FE490C", [])
+  const MarginCallBack = useCallback(() => 0.7, []);
+  const ColorCallBack = useCallback(() => "#FE490C", []);
 
   return (
     <section
@@ -97,14 +95,14 @@ function GlobeComponent() {
         data-aos="fade-up"
         data-aos-duration={1000}
         data-aos-delay="300"
-        style={{ width: "100%", paddingBottom: "75%" }}
+        className="w-full h-full absolute top-0 left-0"
       >
-        <SizeMe>
+        <SizeMe monitorHeight>
           {({ size: { width, height } }) => (
             <Globe
               ref={globeRef}
-              width={width}
-              height={(width / 4) * 9}
+              width={width || window.innerWidth}
+              height={height || window.innerHeight}
               htmlElement={(gData) => {
                 const el = document.createElement("div");
                 el.className = "custom-markerss";
@@ -115,21 +113,14 @@ function GlobeComponent() {
                 tooltip.className = "tooltipss";
                 tooltip.textContent = gData.city;
                 tooltip.style.display = "none";
-                el.onmouseenter = () => {
-                  tooltip.style.display = "block";
-                };
-                el.onmouseleave = () => {
-                  tooltip.style.display = "none";
-                };
+                el.onmouseenter = () => (tooltip.style.display = "block");
+                el.onmouseleave = () => (tooltip.style.display = "none");
                 el.appendChild(tooltip);
                 return el;
               }}
               htmlElementsData={gData}
               backgroundColor="#161616"
-              // markerData={myCordinates}
               hexPolygonsData={countries.features}
-              // hexPolygonResolution={ResCallBack}
-              hexPolygonUseDots={true}
               hexPolygonMargin={MarginCallBack}
               hexPolygonColor={ColorCallBack}
               showAtmosphere={false}
