@@ -210,10 +210,10 @@ html {
   z-index: 9;
   top: clamp(7.5rem, 0.4521rem + 21.2766vw, 16.75rem);
   width: 100%;
-  @media only screen and (max-width: 520px) {
-    position: unset;
-    transform: unset;
-  }
+  // @media only screen and (max-width: 520px) {
+  //   position: unset;
+  //   transform: unset;
+  // }
 }
 .loader {
   width: 8px;
@@ -346,5 +346,11 @@ html {
       min-height: 200vh;
       height: auto;
       // max-height: 125vh;
+  }
+}
+
+#services{
+  .pin-spacer{
+    height: fit-content !important;
   }
 }

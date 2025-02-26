@@ -70,7 +70,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
           data-aos-duration={1000}
           className="desc-16-20 text-hist_white-500 capitalize flex"
         >
-          <span className="subtitle-rectangle"></span>About Us / Mission
+          <span className="subtitle-rectangle"></span>About Us Mission
         </div>
 
         <h2
@@ -95,7 +95,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
               className="pb-6 mb-8 border-b border-hist_white-200 cursor-pointer"
             >
               <div className="sm:flex justify-between items-center">
-                <div className="mr-5 mb-4 sm:mb-0 md:mr-10">
+                {/* <div className="mr-5 mb-4 sm:mb-0 md:mr-10">
                   <Image
                     src={item.avatar}
                     width={100}
@@ -104,7 +104,7 @@ const AboutUs: FC<aboutUsProps> = ({}) => {
                     loading="lazy"
                     className="rounded-full h-[100px] grayscale object-cover object-top"
                   />
-                </div>
+                </div> */}
                 <div className="flex grow justify-between items-start md:items-center">
                   <div className="md:flex grow justify-between items-center">
                     <div className="flex items-center">

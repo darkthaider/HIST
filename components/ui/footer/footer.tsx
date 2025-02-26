@@ -14,13 +14,13 @@ const Footer: FC<footerProps> = ({}) => {
     bodyElem.style.overflow = isContactForm ? "auto" : "hidden";
   };
 
-    const scrollToTop = () => {
-      const bodyElement = document.documentElement;
-      bodyElement.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+  const scrollToTop = () => {
+    const bodyElement = document.documentElement;
+    bodyElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -33,7 +33,7 @@ const Footer: FC<footerProps> = ({}) => {
               data-aos="fade-up"
               data-aos-duration={1000}
             >
-              <Link href="https://x.com/" target="_blank">
+              <Link href="https://x.com/hist_group?s=11" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -49,7 +49,10 @@ const Footer: FC<footerProps> = ({}) => {
                 </svg>
               </Link>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <Link href="https://www.linkedin.com/company/histgroup/about/" target="_blank">
+              <Link
+                href="https://www.linkedin.com/company/histgroup/about/"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -82,9 +85,8 @@ const Footer: FC<footerProps> = ({}) => {
               data-aos-duration={1000}
               data-aos-delay="300"
             >
-              <span  className="text-[20px] font-normal bg-hist_white-900 md:text-[32px] leading-[3.2] md:leading-[2.2] ftr-span">
-
-              start
+              <span className="text-[20px] font-normal bg-hist_white-900 md:text-[32px] leading-[3.2] md:leading-[2.2] ftr-span">
+                start
               </span>
             </button>
           </div>
@@ -97,10 +99,24 @@ const Footer: FC<footerProps> = ({}) => {
           className="flex mdMax:flex-col mdMax:justify-center mdMax:items-center mdMax:gap-[20px] md:justify-between md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 mt-[150px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px] items-end"
         >
           <span className="text-[14px] md:text-[16px] text-hist_white-500">
-            Ⓒ 2023 HIST®. All rights reserved.
+            Ⓒ {new Date().getFullYear()} HIST®. All rights reserved.
           </span>
-          <span className="text-hist_black rounded-full bg-hist_white-900 w-[72px] h-[72px] xl:w-[100px] xl:h-[100px] text-base xl:text-2xl inline-flex justify-center items-center cursor-pointer font-bold" onClick={scrollToTop}>
-            Up
+          <span
+            className="group rounded-full bg-hist_white-500 hover:bg-hist_white-900 w-[55px] h-[55px] xl:w-[65px] xl:h-[65px] inline-flex justify-center items-center cursor-pointer transition-all duration-300 hover:scale-110 shadow-lg"
+            onClick={scrollToTop}
+          >
+            <svg
+              className="w-6 h-6 xl:w-8 xl:h-8 text-hist_black rotate-180"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12 4c.414 0 .75.336.75.75v12.69l4.72-4.72a.75.75 0 1 1 1.06 1.06l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 1 1 1.06-1.06l4.72 4.72V4.75c0-.414.336-.75.75-.75z"
+                clipRule="evenodd"
+              />
+            </svg>
           </span>
         </div>
       </footer>

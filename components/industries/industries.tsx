@@ -3,7 +3,7 @@ import { TypingText } from "./typingText";
 const Industries = () => {
   return (
     <section
-      id="industries"
+      // id="industries"
       className="hist-outer-container vertical-padding-48-82"
     >
       <div className="hist-inner-container">

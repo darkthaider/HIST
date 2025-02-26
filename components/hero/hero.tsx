@@ -67,17 +67,18 @@ const Hero: FC<heroProps> = ({}) => {
               // data-aos-delay="200"
               className="hero-desc-18-32 text-hist_white-800 heroFade"
             >
-              Hist® partnering with innovative companies to{" "}
-              <br className="mdMax:hidden" /> expand and enter new markets.
+              {/* Hist® partnering with innovative companies to{" "}
+              <br className="mdMax:hidden" /> expand and enter new markets. */}
+              Unlocking MENA Markets for <br className="mdMax:hidden" />Biotech & Healthcare Innovators.
             </p>
           </div>
         </div>
       </section>
-      <div className="flex mdMax:justify-center md:justify-end md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 mt-[100px]">
+      {/* <div className="flex mdMax:justify-center md:justify-end md:pl-6 md:pr-6 minContainer:pl-16 minContainer:pr-16 mt-[100px]">
         <span className="text-hist_black rounded-full bg-hist_white-900 w-[72px] h-[72px] xl:w-[100px] xl:h-[100px] text-base xl:text-2xl inline-flex justify-center items-center">
           scroll
         </span>
-      </div>
+      </div> */}
     </>
   );
 };
