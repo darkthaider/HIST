@@ -12,7 +12,7 @@ const faqInitialData = [
   {
     id: 1,
     title: "Ahmed Abdelwahab",
-    desc: "With over 34 years of experience in medical and pharmaceutical distribution, Dr. Ahmed Abdelwahab stands as a stalwart in the industry. Having played a pivotal role in propelling Becton Dickinson to its full potential in Kuwait reflecting to the Middle East and Gulf regions, he is known for dominating markets and expanding revenues. Ahmed has forged enduring partnerships, contributing to the growth of companies across Egypt, Kuwait, UAE, and beyond. As an Industry Veteran in the field he has a natural intuition for problem solving as he’s dealt with a myriad of obstacles. Extending his impactful career, he is also an investor in multiple ventures, reflecting his commitment to fostering innovation and success.",
+    desc: "With over 34 years of experience in medical device, diagnostic and pharmaceutical distribution, Dr. Ahmed Abdelwahab stands as a stalwart in the industry. Having played a pivotal role in propelling Becton Dickinson to its full potential in Kuwait reflecting to the Middle East and Gulf regions, he is known for dominating markets and expanding revenues. Ahmed has forged enduring partnerships, contributing to the growth of companies across 20+ countries. As an Industry Veteran in the field he has a natural intuition for problem solving as he’s dealt with a myriad of obstacles. Extending his impactful career, he is also an investor in multiple ventures, reflecting his commitment to fostering innovation and success.",
     isOpen: false,
     designation: "Co-Founder & President",
     avatar: ahmad.src,
