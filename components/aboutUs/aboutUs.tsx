@@ -22,7 +22,7 @@ const faqInitialData = [
   {
     id: 2,
     title: "Talha Haider",
-    desc: "Talha Haider, the Co-founder of Nod Financial, is a seasoned professional with a diverse skill set encompassing sales, business development, and human resources. Holding a background in Computer Engineering from Boston University and a fintech specialization from UC Berkeley School of Haas, Talha is well-versed in both technology and finance. With a passion for strategy and business growth, he has played a pivotal role in mentoring numerous startups, refining their vision, and enhancing their brand. Talha's creative and adaptive mentality consistently brings out the best in all his partnerships.",
+    desc: "Talha Haider is a seasoned professional with a diverse skill set encompassing sales, business development, and human resources. Holding a background in Computer Engineering from Boston University and strategy and innovation specialization from UC Berkeley School of Haas, Talha is well-versed in both technology and finance. With a passion for strategy and business growth, he has played a pivotal role in mentoring numerous startups, refining their vision, and enhancing their brand. Talha's creative and adaptive mentality consistently brings out the best in all his partnerships.",
     isOpen: false,
     designation: "Co-Founder & COO",
     avatar: talha.src,
