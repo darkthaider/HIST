@@ -2,6 +2,7 @@ import Header from "@/components/ui/header/header";
 import "../scss/global.scss";
 import type { Metadata } from "next";
 import { Anek_Devanagari } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 
 const anek_Devanagari = Anek_Devanagari({ subsets: ["devanagari"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`bg-hist_black ${anek_Devanagari.className}`}>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
