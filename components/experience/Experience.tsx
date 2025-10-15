@@ -32,10 +32,10 @@ const Experience = () => {
           className={`justify-end lg:flex block mt-[60px] md:mt-[160px]`}
         >
           <p className="text-hist_white-800 desc-16-20 max-w-[648px]">
-            At HIST Group, we merge 25 years of medical distribution experience
+            {`At HIST Group, we merge 25 years of medical distribution experience
             with cutting-edge AI to redefine global healthcare expansion.
             Whether you're a startup or an established enterprise, we help you
-            seamlessly enter and scale in the Middle East.
+            seamlessly enter and scale in the Middle East.`}
           </p>
         </div>
       </div>
