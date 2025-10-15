@@ -1,4 +1,4 @@
-Deployment -> 10,15,2025 -> 3 fixing build next package issues, content update
+Deployment -> 10,15,2025 -> 4 fixing build next package issues, content update, adding founder, rewrites for blog
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
