@@ -28,7 +28,7 @@ export const processCard = [
       </svg>
     ),
     title: "Kick Start",
-    desc: "In order to get started we set up a initial call to get to know your needs and company better.",
+    desc: "In order to get started we set up an initial call to get to know your needs and company better.",
   },
   {
     icon: (
@@ -187,6 +187,6 @@ export const processCard = [
       </svg>
     ),
     title: "Execute",
-    desc: "Evaluate the logistics and supply chain requirements for each country and identify any potential bottlenecks. Work in unison to get things done.",
+    desc: "We manage logistics, regulatory filings, and distributor coordination — ensuring seamless execution from approval to market launch.",
   },
 ];

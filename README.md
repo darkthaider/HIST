@@ -1,4 +1,4 @@
-Deployment -> 10,15,2025 -> 5 regulatory sections added, globe scroll issue fix, fixing build next package issues, content update, adding founder, rewrites for blog
+Deployment -> 10,15,2025 -> 6, content updates, fixes, removing flag sections, regulatory sections added, globe scroll issue fix, fixing build next package issues, content update, adding founder, rewrites for blog
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

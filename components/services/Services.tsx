@@ -83,10 +83,7 @@ const Services = () => {
             One Point of Contact. Full Regional Coverage.
           </h2>
           <p className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]">
-            At HIST, we are your one trusted partner for all MENA distribution.
-            No more managing multiple contracts, timelines, or teams. We
-            handpick and oversee top local distributors, while you work directly
-            with us.
+            {`At HIST, we are your one trusted partner for all MENA distribution. No more managing multiple contracts, timelines, or teams. We unite compliance, logistics, marketing, and training under one roof.`}
           </p>
           {/* <div
             className={`${styles.allServices} md:grid grid-cols-2 gap-4 xl:hidden mt-[56px] overflow-y-hidden`}

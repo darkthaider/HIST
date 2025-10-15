@@ -14,8 +14,8 @@ const Locations = () => {
         </div>
         {/* <TextAnimation> */}
         <h2 className="title-32-76 text-hist_white-900 max-w-[1190px] m-auto mt-[22px] ">
-          We are worldwide. <br /> Operating across emerging markets that are
-          ripe for the taking...
+          Global Presence. Local Execution. <br /> Operating across MENA — where
+          access gaps are largest and opportunity is greatest.
         </h2>
         {/* </TextAnimation> */}
       </div>

@@ -24,12 +24,11 @@ const Industries = () => {
           data-aos-delay="200"
           className="title-32-76 text-hist_white-900 mt-[22px] max-w-[1170px]"
         >
-          We have vast experience working with a myriad of companies in the{" "}
-          <br />
+          We have deep experience across the <br />
           <span className="bg-hist_red leading-[1] text-hist_black inline-block pt-[12px] px-1">
             <TypingText />
           </span>{" "}
-          industry
+          industries — from devices to life-saving therapeutics.
         </h2>
       </div>
     </section>

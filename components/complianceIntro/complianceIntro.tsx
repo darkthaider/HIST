@@ -22,7 +22,7 @@ export default function ComplianceIntro() {
           data-aos-delay="200"
           className="mb-8 title-32-76 text-hist_white-900 mt-4 max-w-[900px] mx-auto"
         >
-          Regulatory navigation without the paperwork drag
+          Regulatory Navigation — Without the Paperwork Drag
         </h2>
 
         <p
@@ -32,9 +32,9 @@ export default function ComplianceIntro() {
           data-aos-delay="300"
           className="desc-16-20 text-hist_white-500 md:max-w-[720px] mt-4 mx-auto"
         >
-          HIST AI Compliance Engine automates every dossier submissions and all
-          regulatory filings in each country so you can get approved fast and
-          stay complaint .
+          {`HIST’s AI Compliance Engine automates dossier creation and
+          country-specific regulatory filings, cutting approval time by up to
+          50%.`}
         </p>
       </div>
     </section>

@@ -86,8 +86,8 @@ function GlobeComponent() {
           data-aos-delay="200"
           className="title-32-76 text-hist_white-900 max-w-[1300px] m-auto mt-[22px] "
         >
-          We are worldwide. <br /> Operating across emerging markets that are
-          ripe for the taking...
+          Global Presence. <br /> Local Execution. <br /> Now Operating across
+          20+ Countries.
         </h2>
       </div>
       <div

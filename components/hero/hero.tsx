@@ -69,8 +69,9 @@ const Hero: FC<heroProps> = ({}) => {
             >
               {/* Hist® partnering with innovative companies to{" "}
               <br className="mdMax:hidden" /> expand and enter new markets. */}
-              Biotechs trusted partner for <br className="mdMax:hidden" />
-              MENA Expansion.
+              The AI-powered one stop shop helping biotechs expand across MENA —
+              <br className="mdMax:hidden" />
+              faster, smarter, and fully compliant.
             </p>
           </div>
         </div>
