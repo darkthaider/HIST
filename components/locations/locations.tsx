@@ -2,7 +2,7 @@ import globe from "@/public/globe.png";
 import React from "react";
 import GlobeComponent from "../ui/globe/GlobeComponent";
 import TextAnimation from "../ui/textAnimation/textAnimation";
-import NoSSRWrapper from "../NoSSRWrapper";
+// import NoSSRWrapper from "../NoSSRWrapper";
 
 const Locations = () => {
   return (
