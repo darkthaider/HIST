@@ -58,7 +58,7 @@ const Hero: FC<heroProps> = ({}) => {
               // data-aos-duration={1000}
               className="text-hist_white-900 hero-title-56-128 mdMax:mt-[48px] mb-4 xl:mt-[70px] heroFade"
             >
-              Modern <br /> Strategists of <br /> Distribution
+              Your Scientific Office <br /> in the Middle <br /> East
             </h1>
             <p
               // data-aos-once={true}
@@ -69,7 +69,8 @@ const Hero: FC<heroProps> = ({}) => {
             >
               {/* Hist® partnering with innovative companies to{" "}
               <br className="mdMax:hidden" /> expand and enter new markets. */}
-              Unlocking MENA Markets for <br className="mdMax:hidden" />Biotech & Healthcare Innovators.
+              Biotechs trusted partner for <br className="mdMax:hidden" />
+              MENA Expansion.
             </p>
           </div>
         </div>

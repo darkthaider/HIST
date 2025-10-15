@@ -22,7 +22,7 @@ const Experience = () => {
           data-aos-delay="200"
           className="title-32-76 text-hist_white-900 lgMax:max-w-[716px] max-w-[1013px] mt-[28px]"
         >
-          With 30+ years of experience we position companies to win.
+          With 25+ years of experience we position companies to win.
         </h2>
         <div
           data-aos-once={true}
@@ -32,13 +32,10 @@ const Experience = () => {
           className={`justify-end lg:flex block mt-[60px] md:mt-[160px]`}
         >
           <p className="text-hist_white-800 desc-16-20 max-w-[648px]">
-            Our services include market research, product positioning and
-            branding, distribution network management, regulatory compliance,
-            and much more. We understand that expanding to new markets can be
-            challenging, which is why we work closely with our clients to ensure
-            that their products are well received and reach their target
-            audience. With our expertise, we help our clients overcome any
-            obstacles and achieve success!
+            At HIST Group, we merge 25 years of medical distribution experience
+            with cutting-edge AI to redefine global healthcare expansion.
+            Whether you're a startup or an established enterprise, we help you
+            seamlessly enter and scale in the Middle East.
           </p>
         </div>
       </div>
