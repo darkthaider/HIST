@@ -37,13 +37,11 @@ const navLinks: navLinksType[] = [
   // },
   {
     title: "Careers",
-    link: "https://shape-your-career-at-his-p4ukej0.gamma.site/",
-    targetBlank: true,
+    link: "/careers",
   },
   {
     title: "Blogs",
-    link: "https://blog-rzdfysg.gamma.site/",
-    targetBlank: true,
+    link: "/blogs",
   },
 ];
 
