@@ -88,7 +88,7 @@ const Services = () => {
             handpick and oversee top local distributors, while you work directly
             with us.
           </p>
-          <div
+          {/* <div
             className={`${styles.allServices} md:grid grid-cols-2 gap-4 xl:hidden mt-[56px] overflow-y-hidden`}
           >
             {services.map((data, index) => (
@@ -102,7 +102,7 @@ const Services = () => {
                 ></span>
               </div>
             ))}
-          </div>
+          </div> */}
           {/*
           <div
             ref={flagsRef}
