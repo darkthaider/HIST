@@ -9,13 +9,7 @@ export const TypingText: FC<typingTextProps> = ({}) => {
   return (
     <Typewriter
       options={{
-        strings: [
-          "Pharmaceutical",
-          "Medical",
-          "Biotech",
-          "Healthcare",
-          "Cosmetics",
-        ],
+        strings: ["Medical", "Diagnostic", "Biotech"],
         autoStart: true,
         loop: true,
       }}
