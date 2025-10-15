@@ -16,8 +16,8 @@ const faqInitialData = [
     isOpen: false,
     designation: "Co-Founder & President",
     avatar: ahmad.src,
-    twiter:"https://x.com",
-    linkedin:"https://www.linkedin.com/in/ahmad-abdulwahab-9a696742/",
+    twiter: "https://x.com",
+    linkedin: "https://www.linkedin.com/in/ahmad-abdulwahab-9a696742/",
   },
   {
     id: 2,
@@ -26,22 +26,29 @@ const faqInitialData = [
     isOpen: false,
     designation: "Co-Founder & COO",
     avatar: talha.src,
-    linkedin:"https://www.linkedin.com/in/talha-haider-k/",
-    twiter:"https://x.com/talha_h_k?s=20"
+    linkedin: "https://www.linkedin.com/in/talha-haider-k/",
+    twiter: "https://x.com/talha_h_k?s=20",
   },
-
   {
     id: 3,
+    title: "Ahmad Salman Khan",
+    desc: "AI-native builder focused on regulated, high-stakes workflows. As CTO & Co-Founder at HIST and Cruise AI, Ahmad leads the architecture of our Vision-RAG compliance engine, on-prem/air-gapped LLM deployments (Qwen/Llama), and a FastAPI + Next.js stack designed for traceable, citation-anchored dossiers. Previously at i2c (global payments), he delivered 40+ fintech launches end-to-end (EMV, 3DS, network integrations) and ran complex, multi-org implementations across US/EU/CEMEA—experience that maps directly to country-by-country regulatory orchestration. He blends product sense with systems engineering, shipping secure, scalable pipelines for document parsing, retrieval, and human-in-the-loop review. His background in building enterprise SaaS and healthcare AI makes him uniquely suited to lead HIST’s AI compliance development from MVP to regulator-grade platform.",
+    isOpen: false,
+    designation: "Co-Founder & CTO",
+    // avatar: salman.src, // ← replace with your actual import/variable
+    linkedin: "https://www.linkedin.com/in/ahmad-salman-khan",
+    twiter: "https://github.com/ahmad-punch",
+  },
+  {
+    id: 4,
     title: "Mohamed Abdelwahab",
     desc: "Mohamed Abdelwahab, with a background in genetics, cellular and molecular biology, medical research and a degree from Boston University, is a valuable asset to our team. His experience in the medical field spans various roles, showcasing his versatility and commitment. Mohamed is particularly interested in the productive applications of biotechnology and envisions a future where advancements in this field benefit communities worldwide.",
     isOpen: false,
-    designation: "Co-Founder, Lead Scientist",
+    designation: "Market Epidemiologist & Strategy",
     avatar: mohammad.src,
-    twiter:"https://x.com/",
-    linkedin:"https://www.linkedin.com",
-
+    twiter: "https://x.com/",
+    linkedin: "https://www.linkedin.com",
   },
-
 ];
 
 const AboutUs: FC<aboutUsProps> = ({}) => {
