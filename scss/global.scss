@@ -349,8 +349,6 @@ html {
   }
 }
 
-#services{
-  .pin-spacer{
-    height: fit-content !important;
-  }
-}
+/* Removed ScrollTrigger pin-spacer override that caused incorrect
+   layout calculations and section overlaps when pinning the Services
+   block. Let ScrollTrigger manage spacer height automatically. */

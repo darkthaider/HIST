@@ -27,40 +27,40 @@ const services = [
 ];
 
 const Services = () => {
-  const servicesRef = useRef(null);
+  const servicesRef = useRef<HTMLDivElement | null>(null);
+  const flagsRef = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
-    if (window.innerWidth >= 1200) {
+    if (typeof window === "undefined") return;
+    if (window.innerWidth < 1200) return;
+
+    const ctx = gsap.context(() => {
       const servicesTimeline = gsap
         .timeline()
-        .to(".flag-1,.flag-line-1", {
-          height: "270px",
-          opacity: 1,
-        })
-        .to(".flag-2,.flag-line-2", {
-          height: "270px",
-          opacity: 1,
-        })
-        .to(".flag-3,.flag-line-3", {
-          height: "270px",
-          opacity: 1,
-        })
-        .to(".flag-4,.flag-line-4", {
-          height: "270px",
-          opacity: 1,
-        });
-      ScrollTrigger.create({
+        .to(".flag-1,.flag-line-1", { height: 270, opacity: 1 })
+        .to(".flag-2,.flag-line-2", { height: 270, opacity: 1 })
+        .to(".flag-3,.flag-line-3", { height: 270, opacity: 1 })
+        .to(".flag-4,.flag-line-4", { height: 270, opacity: 1 });
+
+      const st = ScrollTrigger.create({
         animation: servicesTimeline,
-        trigger: servicesRef.current,
+        trigger: servicesRef.current!,
         start: "top top",
-        end: "top top-=1500",
-        pin: servicesRef.current,
-        scrub: 5,
+        end: "+=1500", // scroll distance
+        pin: flagsRef.current!, // pin only the flags row to avoid overlapping siblings
+        pinSpacing: true,
+        anticipatePin: 1,
+        scrub: 3,
+        invalidateOnRefresh: true,
       });
+
       return () => {
         servicesTimeline.kill();
+        st.kill();
       };
-    }
+    }, servicesRef);
+
+    return () => ctx.revert();
   }, []);
   return (
     <section
@@ -123,7 +123,10 @@ const Services = () => {
               </div>
             ))}
           </div>
-          <div className="flex border-b border-b-hist_white-500 services min-h-[270px] mt-[204px] xl:flex items-end hidden">
+          <div
+            ref={flagsRef}
+            className="border-b border-b-hist_white-500 services min-h-[270px] mt-[204px] xl:flex items-end hidden"
+          >
             {services.map((service) => (
               <div
                 key={service.number}
