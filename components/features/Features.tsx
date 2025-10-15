@@ -6,7 +6,12 @@ export default function Features() {
     <section className="hist-outer-container vertical-padding-48-82">
       <div className="hist-inner-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-hist_white-50 rounded-lg p-6">
+          <div
+            data-aos="fade-up"
+            data-aos-once={true}
+            data-aos-duration={800}
+            className="bg-hist_white-50 rounded-lg p-6"
+          >
             <h4 className="text-hist_white-900 font-semibold mb-2">
               On-site experts
             </h4>
@@ -16,7 +21,13 @@ export default function Features() {
             </p>
           </div>
 
-          <div className="bg-hist_white-50 rounded-lg p-6">
+          <div
+            data-aos="fade-up"
+            data-aos-once={true}
+            data-aos-duration={800}
+            data-aos-delay={100}
+            className="bg-hist_white-50 rounded-lg p-6"
+          >
             <h4 className="text-hist_white-900 font-semibold mb-2">
               Always-on AI support
             </h4>
@@ -27,7 +38,13 @@ export default function Features() {
             </p>
           </div>
 
-          <div className="bg-hist_white-50 rounded-lg p-6">
+          <div
+            data-aos="fade-up"
+            data-aos-once={true}
+            data-aos-duration={800}
+            data-aos-delay={200}
+            className="bg-hist_white-50 rounded-lg p-6"
+          >
             <h4 className="text-hist_white-900 font-semibold mb-2">
               One-time knowledge graph
             </h4>

@@ -29,10 +29,13 @@ const services = [
 const Services = () => {
   const servicesRef = useRef<HTMLDivElement | null>(null);
   const flagsRef = useRef<HTMLDivElement | null>(null);
+  const SHOW_DESKTOP_FLAGS = false; // disable flags and pinning
 
   useLayoutEffect(() => {
+    if (!SHOW_DESKTOP_FLAGS) return;
     if (typeof window === "undefined") return;
     if (window.innerWidth < 1200) return;
+    if (!servicesRef.current || !flagsRef.current) return;
 
     const ctx = gsap.context(() => {
       const servicesTimeline = gsap
@@ -69,33 +72,17 @@ const Services = () => {
     >
       <div ref={servicesRef}>
         <div className="hist-inner-container sm:text-center text-left">
-          <div
-            data-aos-once={true}
-            data-aos="fade-up"
-            data-aos-duration={1000}
-            className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center"
-          >
+          <div className="desc-16-20 text-hist_white-500 flex capitalize sm:justify-center">
             <span className="subtitle-rectangle"></span>
             services
           </div>
           {/* <TextAnimation> */}
           <h2
-            data-aos-once={true}
-            data-aos="fade-up"
-            data-aos-duration={1000}
-            data-aos-delay="200"
             className={`${styles.serviceTitle} title-32-76 text-hist_white-900 lgMax:max-w-[600px] max-w-[990px] mb-[16px] mt-[28px] mx-auto }`}
           >
             One Point of Contact. Full Regional Coverage.
           </h2>
-
-          <p
-            data-aos-once={true}
-            data-aos="fade-up"
-            data-aos-duration={1000}
-            data-aos-delay="300"
-            className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]"
-          >
+          <p className="text-hist_white-800 desc-16-20 mdMax:max-w-[500px] sm:mx-auto md:max-w-[580px]">
             At HIST, we are your one trusted partner for all MENA distribution.
             No more managing multiple contracts, timelines, or teams. We
             handpick and oversee top local distributors, while you work directly
@@ -105,14 +92,7 @@ const Services = () => {
             className={`${styles.allServices} md:grid grid-cols-2 gap-4 xl:hidden mt-[56px] overflow-y-hidden`}
           >
             {services.map((data, index) => (
-              <div
-                data-aos-once={true}
-                data-aos="fade-up"
-                data-aos-duration={1000}
-                data-aos-delay={300}
-                key={data.number}
-                className="mt-[28px]"
-              >
+              <div key={data.number} className="mt-[28px]">
                 <span className="text-hist_white-500">{data.number}</span>
                 <p className={` ${styles.serviceTxt} text-hist_white-800 mt-1`}>
                   {data.text}
@@ -123,6 +103,7 @@ const Services = () => {
               </div>
             ))}
           </div>
+          {/*
           <div
             ref={flagsRef}
             className="border-b border-b-hist_white-500 services min-h-[270px] mt-[204px] xl:flex items-end hidden"
@@ -155,6 +136,7 @@ const Services = () => {
               </div>
             ))}
           </div>
+          */}
         </div>
       </div>
     </section>
